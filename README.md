@@ -1,2 +1,2 @@
-# cindychen.github.io
+# surajmalpani.github.io
 Personal Portfolio Website

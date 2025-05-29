@@ -1,127 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cindy Chen | Data Science Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cindy Chen | Data Scientist Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2, h3 {
+      font-family: 'Arbutus Slab', serif;
+      font-weight: 700;
+    }
+    /* Navbar */
+    .navbar {
+      background-color: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1030;
+    }
+    .navbar-brand {
+      font-family: 'Arbutus Slab', serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #111;
+    }
+    .nav-link {
+      font-weight: 600;
+      color: #555;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: #007bff;
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 0;
+    }
+    .container {
+      max-width: 960px;
+    }
+
+    /* Profile Image */
+    .profile-img {
+      max-width: 250px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      margin-bottom: 1rem;
+    }
+
+    /* Social Icons */
+    .social-links a {
+      color: #555;
+      font-size: 1.6rem;
+      margin-right: 1rem;
+      transition: color 0.3s ease;
+    }
+    .social-links a:hover {
+      color: #007bff;
+    }
+
+    /* Experience list */
+    ul.job-list {
+      padding-left: 1rem;
+    }
+    ul.job-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #222;
+      color: #aaa;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
+<body>
 
-<body class="bg-gray-50 font-inter text-gray-800">
-  <header class="bg-white shadow">
-    <div class="max-w-6xl mx-auto px-4 py-6 flex items-center justify-between">
-      <h1 class="text-2xl font-bold">Cindy Chen</h1>
-      <nav class="space-x-6">
-        <a href="#about" class="text-gray-600 hover:text-black">About</a>
-        <a href="#experience" class="text-gray-600 hover:text-black">Experience</a>
-        <a href="#education" class="text-gray-600 hover:text-black">Education</a>
-        <a href="#projects" class="text-gray-600 hover:text-black">Projects</a>
-        <a href="#contact" class="text-gray-600 hover:text-black">Contact</a>
-      </nav>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Cindy Chen</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <section id="about" class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <img src="Prof.jpg" alt="Cindy Chen" class="w-32 h-32 rounded-full mx-auto mb-6 shadow-md" />
-      <h2 class="text-3xl font-bold mb-2">Hi, I'm Cindy Chen</h2>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        Senior Data Analytics Manager at Nike | Graduate Student at Oregon State University
+  <!-- Home Section -->
+  <section id="home" class="text-center bg-white">
+    <div class="container">
+      <img src="images/yourphoto.jpg" alt="Cindy Chen" class="profile-img mx-auto d-block" />
+      <h1>Hello, I'm Cindy Chen</h1>
+      <p class="lead">Data Scientist | Analytics Manager | Problem Solver</p>
+      <p>
+        Experienced Senior Data Analytics Manager at Nike with expertise in data science, business intelligence, and advanced analytics.
       </p>
-      <p class="mt-4 text-md text-gray-500">
-        I'm passionate about using data to drive strategic decisions. With over 8 years of experience in analytics and a Master's in progress in Data Science, I combine technical expertise with business acumen to deliver impactful insights.
-      </p>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/cindychen" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/cindychen" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://medium.com/@cindychen" target="_blank" aria-label="Medium"><i class="bi bi-medium"></i></a>
+      </div>
     </div>
   </section>
 
-  <section id="experience" class="py-16">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl font-bold mb-6">Experience</h2>
-      <div class="space-y-6">
-        <div>
-          <h3 class="text-xl font-semibold">Nike</h3>
-          <p class="text-gray-600">Senior Data Analytics Manager | 2021–Present</p>
-          <p class="text-gray-500 mt-2">
-            Leading a fast-paced analytics team working on omnichannel, consumer, and supply chain insights. Delivering scalable dashboards and statistical models that directly inform business strategy.
-          </p>
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold">Adidas</h3>
-          <p class="text-gray-600">Senior Data Analyst | 2018–2021</p>
-          <p class="text-gray-500 mt-2">
-            Developed analytics solutions to track eCommerce performance and enhance personalization. Automated key KPIs and collaborated with global stakeholders.
-          </p>
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold">Jama Software</h3>
-          <p class="text-gray-600">Data Analyst | 2016–2018</p>
-          <p class="text-gray-500 mt-2">
-            Built reporting pipelines and improved product usage insights through SQL, Python, and Tableau.
-          </p>
+  <!-- Education Section -->
+  <section id="education" class="bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Education</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="mb-4">
+            <h3>Master of Science in Data Analytics / Applied Statistics / Data Science</h3>
+            <p><strong>Oregon State University</strong>, 2022 - 2025 (Expected)</p>
+            <p>Graduate coursework and projects focusing on applied statistics, machine learning, and data visualization.</p>
+          </div>
+          <div>
+            <h3>Master of Science in Operation and Technology Management</h3>
+            <p><strong>University of Portland</strong>, 2017 - 2019</p>
+            <p>Focused on operations management, technology adoption, and business analytics.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="education" class="py-16 bg-gray-100">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl font-bold mb-6">Education</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-white p-6 rounded-2xl shadow">
-          <img src="Oregon-State-University-logo.png" alt="Oregon State University" class="h-12 mb-4" />
-          <h3 class="text-xl font-semibold">Oregon State University</h3>
-          <p class="text-gray-600">MS in Data Analytics / Applied Statistics / Data Science</p>
-          <p class="text-gray-500">2022–2025 (Expected)</p>
+  <!-- Experience Section -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="text-center mb-5">Professional Experience</h2>
+
+      <!-- Nike -->
+      <div class="mb-5">
+        <h3>Nike, Senior Data Analytics Manager</h3>
+        <p><em>Portland, OR | Feb 2020 – Present</em></p>
+        <ul class="job-list">
+          <li>Developed and maintained centralized reporting for excess inventory from 80+ global factories.</li>
+          <li>Created interactive dashboards using Tableau and Power BI for supply chain and marketing analytics.</li>
+          <li>Implemented data pipelines using SQL, Python, and cloud platforms (AWS, Snowflake) to streamline data flow.</li>
+          <li>Collaborated with cross-functional teams to optimize inventory decisions and reduce losses by approximately $40M/year.</li>
+        </ul>
+      </div>
+
+      <!-- Daimler -->
+      <div class="mb-5">
+        <h3>Daimler Truck North America, Data Scientist</h3>
+        <p><em>Portland, OR | Jan 2019 – Jul 2019</em></p>
+        <ul class="job-list">
+          <li>Automated data extraction and analytics pipeline reducing manual efforts by 90%.</li>
+          <li>Built predictive warranty claim models achieving 78% accuracy using Python and scikit-learn.</li>
+          <li>Developed an R Shiny dashboard for live visualization and reporting of warranty data.</li>
+          <li>Worked closely with engineering teams to interpret model results and implement improvements.</li>
+        </ul>
+      </div>
+
+      <!-- Add more experience blocks as needed -->
+
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Portfolio Highlights</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Electricity Cost Analysis in Oregon</h5>
+              <p class="card-text">Performed explanatory and predictive modeling using American Community Survey data and GLMs to analyze factors influencing household electricity costs.</p>
+              <a href="https://github.com/cindychen/electricity-analysis" target="_blank" class="btn btn-primary btn-sm">View Project</a>
+            </div>
+          </div>
         </div>
-        <div class="bg-white p-6 rounded-2xl shadow">
-          <img src="University-of-Portland-logo.png" alt="University of Portland" class="h-12 mb-4" />
-          <h3 class="text-xl font-semibold">University of Portland</h3>
-          <p class="text-gray-600">MS in Operations & Technology Management</p>
-          <p class="text-gray-500">2014–2016</p>
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Flight Delay Visualization</h5>
+              <p class="card-text">Created alternative visualizations of flight delay data for IAH and HOU airports using R and ggplot2 to enhance insights for airport operations teams.</p>
+              <a href="https://github.com/cindychen/flight-delay-viz" target="_blank" class="btn btn-primary btn-sm">View Project</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="projects" class="py-16">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl font-bold mb-6">Projects</h2>
-      <div class="space-y-8">
-        <div>
-          <h3 class="text-xl font-semibold">Electricity Cost Analysis in Oregon</h3>
-          <p class="text-gray-500">Analyzed American Community Survey data using multiple linear regression and GLMs to model household electricity costs. Identified key drivers and delivered policy-relevant insights for Oregon residents.</p>
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold">Stack Exchange User Engagement Analysis</h3>
-          <p class="text-gray-500">Led a data pipeline project extracting, processing, and visualizing Stack Exchange XML data. Used PySpark, GCP, and Power BI to uncover user behavior trends and engagement patterns.</p>
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold">Flight Delay Visualization</h3>
-          <p class="text-gray-500">Created colorblind-friendly visualizations in R using ggplot2 to explore flight delays at IAH and HOU airports. Incorporated peer feedback and emphasized clarity, accessibility, and storytelling.</p>
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold">Chocolate Sales Dashboard</h3>
-          <p class="text-gray-500">Cleaned and transformed chocolate sales data using tidyverse and lubridate. Built exploratory dashboards with ggplot2 and Power BI to uncover monthly trends, top-selling products, and country-level insights.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="py-16">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-2xl font-bold mb-4">Contact</h2>
-      <p class="text-gray-600 mb-6">
-        I'd love to connect and collaborate. You can reach me on LinkedIn or via email.
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2 class="text-center mb-5">About Me</h2>
+      <p>
+        I’m a data scientist and analytics leader with 8+ years of experience working in fast-paced environments including Nike, Daimler, and Adidas.
+        I specialize in turning raw data into actionable insights that drive business strategy and operational improvements.
       </p>
-      <a href="mailto:cindy.chen@example.com" class="inline-block bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800">Email Me</a>
+      <p>
+        My skillset includes SQL, Python, R, Tableau, Power BI, cloud platforms (Azure, AWS, GCP), and advanced statistical modeling. I’m passionate about creating clear, impactful data visualizations and scalable data solutions.
+      </p>
     </div>
   </section>
 
-  <footer class="bg-white border-t py-6 text-center text-gray-500 text-sm">
-    © 2025 Cindy Chen. All rights reserved.
+  <!-- Contact Section -->
+  <section id="contact" class="bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Get In Touch</h2>
+      <p class="text-center mb-4">Feel free to reach out for collaborations, consulting, or just to say hello!</p>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" name="Name" class="form-control" required />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="Email" class="form-control" required />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="Message" class="form-control" rows="4" required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary px-4">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Cindy Chen. All rights reserved.</p>
+    </div>
   </footer>
-</body>
 
+  <!-- Bootstrap 5 JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Optional: Active link highlighting on scroll -->
+  <script>
+    // Update active nav link on scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+</body>
 </html>

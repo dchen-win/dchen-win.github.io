@@ -130,35 +130,38 @@
 
 
 <!-- Home Section -->
-<section id="home">
-  <div class="container">
-    <!-- Text Column -->
-    <div style="flex: 1 1 60%; padding-right: 20px;">
+<section id="home" style="padding: 60px 20px;">
+  <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; max-width: 1200px; margin: 0 auto;">
+    
+    <!-- Image Column (Left) -->
+    <div style="flex: 1 1 40%; text-align: center;">
+      <img src="images/Prof.png" alt="Cindy Chen"
+           style="width: 500px; height: 500px; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+
+    <!-- Text Column (Right) -->
+    <div style="flex: 1 1 60%; padding-left: 40px;">
       <h1>Hello, I'm Cindy Chen</h1>
       <p class="lead">Data Scientist | Analytics Manager | Problem Solver</p>
       <p>
         Experienced Senior Data Analytics Manager at Nike with expertise in data science, business intelligence, and advanced analytics.
       </p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/chendi20" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <div class="social-links" style="margin-top: 20px;">
+        <a href="https://www.linkedin.com/in/chendi20" target="_blank" aria-label="LinkedIn" style="margin-right: 15px;"><i class="bi bi-linkedin"></i></a>
         <a href="https://github.com/dchen-win" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
       </div>
     </div>
 
-    <!-- Image Column -->
-    <div style="flex: 1 1 40%; text-align: center;">
-      <img src="images/Prof.png" alt="Cindy Chen"
-           style="width: 400px; height: 400px; object-fit: cover; border: 5px solid orange; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    </div>
   </div>
 </section>
 
 
+
 <!-- About Section -->
-<section id="about">
-  <div class="container">
+<section id="about" style="background-color: #f2f2f2; padding: 40px 20px;">
+  <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; max-width: 1200px; margin: 0 auto;">
     <div style="flex: 1 1 60%; padding-right: 20px;">
-      <h2>About Me</h2>
+      <h2 style="font-size: 24px; margin-bottom: 20px;">About Me</h2>
       <p>
         I’m a data scientist and analytics leader with 8+ years of experience working in fast-paced environments including Nike, Daimler, and Adidas.
         I specialize in turning raw data into actionable insights that drive business strategy and operational improvements.
@@ -172,9 +175,6 @@
     </div>
   </div>
 </section>
-
-</body>
-</html>
 
 
 <!-- Timeline Section -->

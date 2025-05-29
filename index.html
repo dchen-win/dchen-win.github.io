@@ -153,154 +153,212 @@
 </section>
 
 
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Career Growth Timeline</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: white;
-        margin: 0;
-        padding: 40px 20px;
-      }
-  
-      /* About Section */
-      #about {
-        background-color: #f0f0f0; /* light grey */
-        padding: 40px 20px;
-        margin-bottom: 60px;
-        border-radius: 8px;
-      }
-      #about h2 {
-        font-size: 24px;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 40px;
-      }
-      #about p {
-        max-width: 700px;
-        margin: 0 auto 16px auto;
-        font-size: 16px;
-        line-height: 1.5;
-        color: #333;
-      }
-  
-      /* Timeline Title - same style as About Me */
-      .timeline-title {
-        font-family: Arial, sans-serif;
-        font-size: 24px;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 60px;
-      }
-  
-      .timeline {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        position: relative;
-        margin: 0 auto;
-        max-width: 1200px;
-      }
-  
-      .timeline::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 50%;
-        width: 100%;
-        height: 4px;
-        background: linear-gradient(to right top, #888, #000);
-        z-index: 1;
-      }
-  
-      .step {
-        background-color: white;
-        border-radius: 12px;
-        padding: 20px;
-        text-align: center;
-        width: 180px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        z-index: 2;
-        position: relative;
-        min-height: 320px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-  
-      .step img {
-        width: 80px;
-        height: auto;
-        margin: 0 auto 10px auto;
-      }
-  
-      .step h4 {
-        margin: 10px 0 5px 0;
-        font-size: 16px;
-        font-weight: bold;
-      }
-  
-      .step .company {
-        font-weight: bold;
-      }
-  
-      .step .industry {
-        font-style: italic;
-        color: #555;
-        margin-bottom: 10px;
-      }
-  
-      .step .duration {
-        font-size: 13px;
-        color: #333;
-        margin-bottom: 10px;
-        line-height: 1.3;
-        white-space: pre-line;
-      }
-  
-      .step .desc {
-        font-size: 13px;
-        color: #444;
-      }
-  
-      /* Upward arrow below Nike step */
-      .step.nike::after {
-        content: "▲";
-        font-size: 24px;
-        color: #000;
-        position: absolute;
-        bottom: -30px;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    </style>
-  </head>
-  <body>
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cindy Chen Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
 
-    <section id="about" style="background-color: #f2f2f2; padding: 40px 20px;">
-      <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; max-width: 1200px; margin: 0 auto;">
-        <div style="flex: 1 1 60%; padding-right: 20px;">
-          <h2 style="font-size: 24px; margin-bottom: 20px;">About Me</h2>
-          <p>
-            I’m a data scientist and analytics leader with 8+ years of experience working in fast-paced environments including Nike, Daimler, and Adidas.
-            I specialize in turning raw data into actionable insights that drive business strategy and operational improvements.
-          </p>
-          <p>
-            My skillset includes SQL, Python, R, Tableau, Power BI, cloud platforms (Azure, AWS, GCP), and advanced statistical modeling. I’m passionate about creating clear, impactful data visualizations and scalable data solutions.
-          </p>
-        </div>
-        <div style="flex: 1 1 40%; text-align: center;">
-          <img src="images/casual.jpg" alt="Cindy Chen casual photo"
-               style="width: 100%; max-width: 250px; border-radius: 50%; border: 5px solid orange; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-        </div>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* Home Section */
+    #home {
+      background-color: #fff;
+      padding: 60px 20px;
+    }
+
+    #home h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    #home .lead {
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    .social-links a {
+      margin-right: 15px;
+      font-size: 24px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    /* About Section */
+    #about {
+      background-color: #f0f0f0;
+      padding: 40px 20px;
+      border-radius: 8px;
+    }
+
+    #about h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    #about p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+      margin-bottom: 16px;
+    }
+
+    /* Timeline Styling */
+    .timeline-title {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .timeline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      position: relative;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(to right top, #888, #000);
+      z-index: 1;
+    }
+
+    .step {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      width: 180px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 2;
+      position: relative;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .step img {
+      width: 80px;
+      height: auto;
+      margin: 0 auto 10px auto;
+    }
+
+    .step h4 {
+      margin: 10px 0 5px 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .step .company {
+      font-weight: bold;
+    }
+
+    .step .industry {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .step .duration {
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 10px;
+      line-height: 1.3;
+      white-space: pre-line;
+    }
+
+    .step .desc {
+      font-size: 13px;
+      color: #444;
+    }
+
+    .step.nike::after {
+      content: "▲";
+      font-size: 24px;
+      color: #000;
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+
+  <!-- Bootstrap Icons CDN (for social icons) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Home Section -->
+<section id="home">
+  <div class="container">
+    <!-- Text Column -->
+    <div style="flex: 1 1 60%; padding-right: 20px;">
+      <h1>Hello, I'm Cindy Chen</h1>
+      <p class="lead">Data Scientist | Analytics Manager | Problem Solver</p>
+      <p>
+        Experienced Senior Data Analytics Manager at Nike with expertise in data science, business intelligence, and advanced analytics.
+      </p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/chendi20" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/dchen-win" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
       </div>
-    </section>
-    
+    </div>
+
+    <!-- Image Column -->
+    <div style="flex: 1 1 40%; text-align: center;">
+      <img src="images/Prof.png" alt="Cindy Chen"
+           style="width: 250px; height: 250px; border-radius: 50%; border: 5px solid orange; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+  <div class="container">
+    <div style="flex: 1 1 60%; padding-right: 20px;">
+      <h2>About Me</h2>
+      <p>
+        I’m a data scientist and analytics leader with 8+ years of experience working in fast-paced environments including Nike, Daimler, and Adidas.
+        I specialize in turning raw data into actionable insights that drive business strategy and operational improvements.
+      </p>
+      <p>
+        My skillset includes SQL, Python, R, Tableau, Power BI, cloud platforms (Azure, AWS, GCP), and advanced statistical modeling. I’m passionate about creating clear, impactful data visualizations and scalable data solutions.
+      </p>
+    </div>
+    <div style="flex: 1 1 40%; text-align: center;">
+      <img src="images/casual.jpg" alt="Cindy Chen casual photo" style="width: 100%; max-width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
 
 
 <!-- Timeline Section -->

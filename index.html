@@ -160,164 +160,149 @@
 
 
   <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Career Growth Timeline</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: white;
-      margin: 0;
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    h1 {
-      font-size: 24px;
-      margin-bottom: 40px;
-    }
-    .timeline {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      position: relative;
-      width: 100%;
-      max-width: 1200px;
-      padding: 20px;
-    }
-    .timeline::before {
-      content: "";
-      position: absolute;
-      top: 100px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: none;
-      z-index: 0;
-    }
-    .arrow {
-      position: absolute;
-      top: 100px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(to right, #ccc 98%, transparent 98%);
-      background-size: 40px 100%;
-      background-repeat: repeat-x;
-      z-index: 0;
-    }
-    .timeline-section {
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
-      width: 220px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      z-index: 1;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 360px;
-    }
-    .company {
-      font-weight: bold;
-      font-size: 18px;
-      margin-bottom: 4px;
-    }
-    .industry {
-      font-size: 14px;
-      color: gray;
-      margin-bottom: 10px;
-    }
-    .date {
-      font-size: 14px;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-    .duration {
-      font-size: 13px;
-      margin-bottom: 10px;
-      color: #666;
-    }
-    ul {
-      text-align: left;
-      padding-left: 20px;
-      font-size: 14px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Career Growth Timeline</h1>
-  <div class="timeline">
-    <div class="arrow"></div>
-
-    <div class="timeline-section">
-      <div class="company">ASCM Case Competition</div>
-      <div class="industry">Supply Chain</div>
-      <div class="date">2018</div>
-      <div class="duration">6 months</div>
-      <ul>
-        <li>Top 6 team out of 432</li>
-        <li>Reduced transportation cost by 40%</li>
-      </ul>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Growth Timeline</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        margin: 0;
+        padding: 40px 20px;
+      }
+  
+      .timeline-title {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 60px;
+        font-weight: bold;
+      }
+  
+      .timeline {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        position: relative;
+        margin: 0 auto;
+        max-width: 1200px;
+      }
+  
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(to right top, #888, #000);
+        z-index: 1;
+      }
+  
+      .step {
+        background-color: white;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        width: 180px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        z-index: 2;
+        position: relative;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+  
+      .step img {
+        width: 80px;
+        height: auto;
+        margin: 0 auto 10px auto;
+      }
+  
+      .step h4 {
+        margin: 10px 0 5px 0;
+        font-size: 16px;
+        font-weight: bold;
+      }
+  
+      .step .company {
+        font-weight: bold;
+      }
+  
+      .step .industry {
+        font-style: italic;
+        color: #555;
+        margin-bottom: 10px;
+      }
+  
+      .step .duration {
+        font-size: 13px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+  
+      .step .desc {
+        font-size: 13px;
+        color: #444;
+      }
+    </style>
+  </head>
+  <body>
+  
+    <div class="timeline-title">Career Growth Timeline</div>
+    <div class="timeline">
+  
+      <div class="step">
+        <img src="images/ascm-logo.png" alt="ASCM">
+        <div class="company">ASCM</div>
+        <div class="industry">Supply Chain</div>
+        <div class="duration">2018 (6 months)</div>
+        <h4>Case Competition Participant</h4>
+        <div class="desc">Top 6 global team; cut costs 40% via data-driven supply chain optimization.</div>
+      </div>
+  
+      <div class="step">
+        <img src="images/daimler-logo.png" alt="Daimler">
+        <div class="company">Daimler</div>
+        <div class="industry">Automotive</div>
+        <div class="duration">Jan 2019 – Feb 2020 (1 year)</div>
+        <h4>Data Scientist</h4>
+        <div class="desc">Built strong foundation; built dashboards; applied AI/ML; bridged OpEx, IT, DevOps.</div>
+      </div>
+  
+      <div class="step">
+        <img src="images/jama-logo.png" alt="Jama Software">
+        <div class="company">Jama Software</div>
+        <div class="industry">Software</div>
+        <div class="duration">Mar 2020 – May 2021 (1.5 years)</div>
+        <h4>Data Analyst</h4>
+        <div class="desc">Owned executive dashboards, drove internal enablement, and automated reporting.</div>
+      </div>
+  
+      <div class="step">
+        <img src="images/adidas-logo.png" alt="Adidas">
+        <div class="company">Adidas</div>
+        <div class="industry">Retail</div>
+        <div class="duration">Jun 2021 – Sep 2022 (2.5 years)</div>
+        <h4>Senior Data Analyst</h4>
+        <div class="desc">Led analytics for supply chain initiatives and collaborated with global teams.</div>
+      </div>
+  
+      <div class="step">
+        <img src="images/nike-logo.png" alt="Nike">
+        <div class="company">Nike</div>
+        <div class="industry">Retail</div>
+        <div class="duration">Oct 2022 – Present</div>
+        <h4>Data Analytics Manager</h4>
+        <div class="desc">Led tech teams, enhanced data integrity, optimized data validation process, and reduced data refresh time.</div>
+      </div>
+  
     </div>
-
-    <div class="timeline-section">
-      <div class="company">Daimler Truck North America</div>
-      <div class="industry">Automotive</div>
-      <div class="date">Jan 2019 – Feb 2020</div>
-      <div class="duration">1 year</div>
-      <ul>
-        <li>Analyzed component & failure code data for ML models</li>
-        <li>Reduced part shortages by 20%</li>
-        <li>Created live Power BI dashboards with SQL models</li>
-        <li>Designed Tableau dashboards and supported data visualization</li>
-      </ul>
-    </div>
-
-    <div class="timeline-section">
-      <div class="company">Jama Software</div>
-      <div class="industry">Software</div>
-      <div class="date">Mar 2020 – May 2021</div>
-      <div class="duration">1.5 years</div>
-      <ul>
-        <li>Worked with DevOps to define business/system needs</li>
-        <li>Bridged OpEx and IT with analytical dashboards</li>
-        <li>Led data visualization for PMO in Tableau</li>
-      </ul>
-    </div>
-
-    <div class="timeline-section">
-      <div class="company">Adidas</div>
-      <div class="industry">Retail</div>
-      <div class="date">Jun 2021 – Sep 2022</div>
-      <div class="duration">2.5 years</div>
-      <ul>
-        <li>Senior Data Analyst</li>
-        <li>Led cross-functional analytical projects</li>
-        <li>Developed KPIs for strategic decisions</li>
-      </ul>
-    </div>
-
-    <div class="timeline-section">
-      <div class="company">Nike</div>
-      <div class="industry">Retail</div>
-      <div class="date">Sep 2022 – Present</div>
-      <div class="duration">Current</div>
-      <ul>
-        <li>Senior Data Analytics Manager</li>
-        <li>Delivered insights for executive decisions</li>
-        <li>Directed fast-paced, high-impact analytics</li>
-      </ul>
-    </div>
-
-  </div>
-</body>
-</html>
-
+  
+  </body>
+  </html>
   
 
   <!-- Portfolio Section -->

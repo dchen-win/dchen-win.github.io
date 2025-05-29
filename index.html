@@ -157,122 +157,132 @@
     </div>
   </section>
 
-<!-- ########## Experience/Clients Section ########################### -->
-<div class="site-section" id="clients-section" style="background: #f8f9fa; padding: 60px 0;">
-  <div class="container">
-    <div class="col-12 mb-5 text-center">
-      <h2 class="section-title">Clients & Professional Experience</h2>
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Growth Timeline</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f9f9f9;
+        padding: 40px 20px;
+      }
+      .timeline {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+        margin: 60px auto;
+        max-width: 1100px;
+      }
+      .step {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        padding: 20px;
+        width: 180px;
+        text-align: center;
+        position: relative;
+      }
+      .step img {
+        width: 80px;
+        height: auto;
+        margin-bottom: 10px;
+      }
+      .step h4 {
+        font-size: 16px;
+        margin: 10px 0 5px;
+      }
+      .step p {
+        font-size: 14px;
+        color: #555;
+        margin: 4px 0;
+      }
+      .step .industry {
+        font-size: 13px;
+        font-style: italic;
+        color: #888;
+      }
+      .timeline::before {
+        content: '';
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #ccc;
+        z-index: 0;
+      }
+      .step::after {
+        content: '';
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border: 3px solid #0077cc;
+        border-radius: 50%;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+  
+    <h2 style="text-align:center; font-size: 22px;">Career Growth Timeline</h2>
+  
+    <div class="timeline">
+  
+      <div class="step">
+        <img src="images/ascm-logo.png" alt="ASCM">
+        <h4>Case Competition</h4>
+        <p>ASCM</p>
+        <p class="industry">Supply Chain</p>
+        <p>Participated in analytics-driven case competition</p>
+      </div>
+  
+      <div class="step">
+        <img src="images/daimler-logo.png" alt="Daimler">
+        <h4>Data Scientist</h4>
+        <p>Daimler</p>
+        <p class="industry">Automotive</p>
+        <p>Automated data extraction and fault prediction systems</p>
+      </div>
+  
+      <div class="step">
+        <img src="images/jama-logo.png" alt="Jama Software">
+        <h4>Data Analyst</h4>
+        <p>Jama Software</p>
+        <p class="industry">SaaS / Product Dev</p>
+        <p>Built dashboards for user behavior and KPI tracking</p>
+      </div>
+  
+      <div class="step">
+        <img src="images/adidas-logo.png" alt="Adidas">
+        <h4>Senior Data Analyst</h4>
+        <p>Adidas</p>
+        <p class="industry">Apparel / Retail</p>
+        <p>Led visualization of inventory & sustainability metrics</p>
+      </div>
+  
+      <div class="step">
+        <img src="images/nike-logo.png" alt="Nike">
+        <h4>Data Analytics Manager</h4>
+        <p>Nike</p>
+        <p class="industry">Apparel / Retail</p>
+        <p>Centralized reporting across 80+ factories globally</p>
+      </div>
+  
     </div>
-
-    <div class="row justify-content-center g-4">
-
- <!-- ########## Experience/Clients Section ########################### -->
-<div class="site-section" id="clients-section" style="background: #f8f9fa; padding: 60px 0;">
-  <div class="container">
-    <div class="col-12 mb-5 text-center">
-      <h2 class="section-title">Clients & Professional Experience</h2>
-    </div>
-
-    <div class="row g-4 justify-content-center">
-
-      <!-- Nike -->
-      <div class="col-md-6">
-        <div class="experience-box p-4 bg-white shadow rounded">
-          <a href="https://about.nike.com/" target="_blank" class="d-block mb-3 text-center">
-            <img src="images/nike-logo.png" alt="Nike Logo" style="max-width: 180px; height: auto;" />
-          </a>
-          <h3>Senior Data Analytics Manager</h3>
-          <p><strong>Nike, Portland, OR</strong> | Feb 2020 - Present</p>
-          <ul>
-            <li>Engineered and implemented a centralized data reporting system collecting excess inventory data from 80+ factories.</li>
-            <li>Built data pipelines integrating internal cloud databases and created Tableau dashboards for leadership insights.</li>
-            <li>Collaborated across teams to salvage excess materials, saving ~$40M annually.</li>
-            <li>Technologies: SQL, Tableau, Python, Alteryx, AWS, Snowflake, Teradata, React.js, R Shiny.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Adidas -->
-      <div class="col-md-6">
-        <div class="experience-box p-4 bg-white shadow rounded">
-          <a href="https://www.adidas-group.com/en/" target="_blank" class="d-block mb-3 text-center">
-            <img src="images/adidas-logo.png" alt="Adidas Logo" style="max-width: 180px; height: auto;" />
-          </a>
-          <h3>Data Analyst</h3>
-          <p><strong>Adidas, Portland, OR</strong> | Mar 2019 - Jan 2020</p>
-          <ul>
-            <li>Developed dashboards to track sales trends and operational KPIs.</li>
-            <li>Performed data-driven insights to optimize inventory and improve forecasting accuracy.</li>
-            <li>Collaborated with marketing and supply chain teams to support data initiatives.</li>
-            <li>Tools used: Excel, Power BI, SQL, Python.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Jama Software -->
-      <div class="col-md-8">
-        <div class="experience-box p-4 bg-white shadow rounded">
-          <a href="https://www.jamasoftware.com/" target="_blank" class="d-block mb-3 text-center">
-            <img src="images/jama-logo.png" alt="Jama Software Logo" style="max-width: 180px; height: auto;" />
-          </a>
-          <h3>Data Analyst</h3>
-          <p><strong>Jama Software, Portland, OR</strong> | Jul 2017 - Aug 2018</p>
-          <ul>
-            <li>Analyzed customer usage data to improve product features and reduce churn.</li>
-            <li>Collaborated with product and engineering teams on data-driven development priorities.</li>
-            <li>Built dashboards and reports with Tableau and SQL to inform business decisions.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Daimler -->
-      <div class="col-md-6">
-        <div class="experience-box p-4 bg-white shadow rounded">
-          <a href="https://www.daimler.com/en/" target="_blank" class="d-block mb-3 text-center">
-            <img src="images/daimler-logo.png" alt="Daimler Logo" style="max-width: 200px; height: auto;" />
-          </a>
-          <h3>Data Scientist</h3>
-          <p><strong>Daimler, Portland, OR</strong> | Jan 2019 - Jul 2019</p>
-          <ul>
-            <li>Automated data extraction & statistical processes saving 90% of manual work.</li>
-            <li>Developed R Shiny app to visualize daily updated telematics and warranty data.</li>
-            <li>Achieved 78% accuracy predicting warranty claims via machine learning models.</li>
-            <li>Technologies: Python, Spark, pandas, scikit-learn, Alteryx, Tableau, Azure.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- ASCM -->
-      <div class="col-md-6">
-        <div class="experience-box p-4 bg-white shadow rounded">
-          <a href="https://www.ascm.org/" target="_blank" class="d-block mb-3 text-center">
-            <img src="images/ascm-logo.png" alt="ASCM Logo" style="max-width: 180px; height: auto;" />
-          </a>
-          <h3>Supply Chain Data Analyst (Case Competition)</h3>
-          <p><strong>ASCM</strong> | Sep 2018 - Feb 2019</p>
-          <ul>
-            <li>Selected Top 6 team globally out of 432 for supply chain case competition.</li>
-            <li>Reduced company costs by 40% by analyzing transportation and inventory data.</li>
-            <li>Cut expenses by 10% through supplier consolidation recommendations.</li>
-            <li>Delivered actionable recommendations backed by quantifiable benefits.</li>
-          </ul>
-        </div>
-      </div>
-
-    </div> <!-- /.row -->
-  </div> <!-- /.container -->
-</div> <!-- /#clients-section -->
-
-<style>
-  .experience-box {
-    transition: box-shadow 0.3s ease;
-  }
-  .experience-box:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  }
-</style>
-
-
+  
+  </body>
+  </html>
+  
 
   <!-- Portfolio Section -->
   <section id="portfolio" class="bg-light">

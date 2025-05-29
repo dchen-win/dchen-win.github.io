@@ -168,114 +168,135 @@
     <style>
       body {
         font-family: Arial, sans-serif;
-        background: #f9f9f9;
+        background-color: #f5f5f5;
+        margin: 0;
         padding: 40px 20px;
       }
+  
+      .timeline-title {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 60px;
+        font-weight: bold;
+      }
+  
       .timeline {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: flex-end;
         position: relative;
-        margin: 60px auto;
-        max-width: 1100px;
+        margin: 0 auto;
+        max-width: 1200px;
       }
+  
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(to right top, #888, #000);
+        z-index: 1;
+      }
+  
       .step {
-        background: white;
+        background-color: white;
         border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         padding: 20px;
-        width: 180px;
         text-align: center;
+        width: 180px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        z-index: 2;
         position: relative;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
+  
       .step img {
         width: 80px;
         height: auto;
+        margin: 0 auto 10px auto;
+      }
+  
+      .step h4 {
+        margin: 10px 0 5px 0;
+        font-size: 16px;
+        font-weight: bold;
+      }
+  
+      .step .company {
+        font-weight: bold;
+      }
+  
+      .step .industry {
+        font-style: italic;
+        color: #555;
         margin-bottom: 10px;
       }
-      .step h4 {
-        font-size: 16px;
-        margin: 10px 0 5px;
-      }
-      .step p {
-        font-size: 14px;
-        color: #555;
-        margin: 4px 0;
-      }
-      .step .industry {
+  
+      .step .duration {
         font-size: 13px;
-        font-style: italic;
-        color: #888;
+        color: #333;
+        margin-bottom: 10px;
       }
-      .timeline::before {
-        content: '';
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background: #ccc;
-        z-index: 0;
-      }
-      .step::after {
-        content: '';
-        position: absolute;
-        top: 50px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 20px;
-        height: 20px;
-        background: #fff;
-        border: 3px solid #0077cc;
-        border-radius: 50%;
-        z-index: 1;
+  
+      .step .desc {
+        font-size: 13px;
+        color: #444;
       }
     </style>
   </head>
   <body>
   
-    <h2 style="text-align:center; font-size: 22px;">Career Growth Timeline</h2>
-  
+    <div class="timeline-title">Career Growth Timeline</div>
     <div class="timeline">
   
       <div class="step">
         <img src="images/ascm-logo.png" alt="ASCM">
-        <h4>Case Competition</h4>
-        <p>ASCM</p>
-        <p class="industry">Supply Chain</p>
-        <p>Participated in analytics-driven case competition</p>
+        <div class="company">ASCM</div>
+        <div class="industry">Supply Chain</div>
+        <div class="duration">2018 (6 months)</div>
+        <h4>Case Competition Participant</h4>
+        <div class="desc">Launched two project-based courses and designed statistical quizzes.</div>
       </div>
   
       <div class="step">
         <img src="images/daimler-logo.png" alt="Daimler">
+        <div class="company">Daimler</div>
+        <div class="industry">Automotive</div>
+        <div class="duration">Jan 2019 – Feb 2020 (1 year)</div>
         <h4>Data Scientist</h4>
-        <p>Daimler</p>
-        <p class="industry">Automotive</p>
-        <p>Automated data extraction and fault prediction systems</p>
+        <div class="desc">Developed ML models, automated data extraction, and created R Shiny apps.</div>
       </div>
   
       <div class="step">
         <img src="images/jama-logo.png" alt="Jama Software">
+        <div class="company">Jama Software</div>
+        <div class="industry">Software</div>
+        <div class="duration">Mar 2020 – May 2021 (1.5 years)</div>
         <h4>Data Analyst</h4>
-        <p>Jama Software</p>
-        <p class="industry">SaaS / Product Dev</p>
-        <p>Built dashboards for user behavior and KPI tracking</p>
+        <div class="desc">Owned executive dashboards, drove internal enablement, and automated reporting.</div>
       </div>
   
       <div class="step">
         <img src="images/adidas-logo.png" alt="Adidas">
+        <div class="company">Adidas</div>
+        <div class="industry">Retail</div>
+        <div class="duration">Jun 2021 – Sep 2022 (2.5 years)</div>
         <h4>Senior Data Analyst</h4>
-        <p>Adidas</p>
-        <p class="industry">Apparel / Retail</p>
-        <p>Led visualization of inventory & sustainability metrics</p>
+        <div class="desc">Led analytics for supply chain initiatives and collaborated with global teams.</div>
       </div>
   
       <div class="step">
         <img src="images/nike-logo.png" alt="Nike">
+        <div class="company">Nike</div>
+        <div class="industry">Retail</div>
+        <div class="duration">Oct 2022 – Present</div>
         <h4>Data Analytics Manager</h4>
-        <p>Nike</p>
-        <p class="industry">Apparel / Retail</p>
-        <p>Centralized reporting across 80+ factories globally</p>
+        <div class="desc">Designed centralized dashboards and optimized $40M/year supply chain savings.</div>
       </div>
   
     </div>

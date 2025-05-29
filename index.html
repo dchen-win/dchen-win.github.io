@@ -143,27 +143,11 @@
     </div>
   </section>
 
-   <!-- About Section -->
-  <section id="about">
-    <div class="container">
-      <h2 class="text-center mb-5">About Me</h2>
-      <p>
-        I’m a data scientist and analytics leader with 8+ years of experience working in fast-paced environments including Nike, Daimler, and Adidas.
-        I specialize in turning raw data into actionable insights that drive business strategy and operational improvements.
-      </p>
-      <p>
-        My skillset includes SQL, Python, R, Tableau, Power BI, cloud platforms (Azure, AWS, GCP), and advanced statistical modeling. I’m passionate about creating clear, impactful data visualizations and scalable data solutions.
-      </p>
-    </div>
-  </section>
-
-
-
   <!DOCTYPE html>
   <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Career Growth Timeline</title>
     <style>
       body {
@@ -173,11 +157,34 @@
         padding: 40px 20px;
       }
   
-      .timeline-title {
-        text-align: center;
-        font-size: 24px;
+      /* About Section */
+      #about {
+        background-color: #f0f0f0; /* light grey */
+        padding: 40px 20px;
         margin-bottom: 60px;
+        border-radius: 8px;
+      }
+      #about h2 {
+        font-size: 24px;
         font-weight: bold;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      #about p {
+        max-width: 700px;
+        margin: 0 auto 16px auto;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+      }
+  
+      /* Timeline Title - same style as About Me */
+      .timeline-title {
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 60px;
       }
   
       .timeline {
@@ -209,7 +216,7 @@
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         z-index: 2;
         position: relative;
-        min-height: 300px;
+        min-height: 320px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -241,21 +248,49 @@
         font-size: 13px;
         color: #333;
         margin-bottom: 10px;
+        line-height: 1.3;
+        white-space: pre-line;
       }
   
       .step .desc {
         font-size: 13px;
         color: #444;
       }
+  
+      /* Upward arrow below Nike step */
+      .step.nike::after {
+        content: "▲";
+        font-size: 24px;
+        color: #000;
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     </style>
   </head>
   <body>
   
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          I’m a data scientist and analytics leader with 8+ years of experience working in fast-paced environments including Nike, Daimler, and Adidas.
+          I specialize in turning raw data into actionable insights that drive business strategy and operational improvements.
+        </p>
+        <p>
+          My skillset includes SQL, Python, R, Tableau, Power BI, cloud platforms (Azure, AWS, GCP), and advanced statistical modeling. I’m passionate about creating clear, impactful data visualizations and scalable data solutions.
+        </p>
+      </div>
+    </section>
+  
+    <!-- Career Growth Timeline -->
     <div class="timeline-title">Career Growth Timeline</div>
     <div class="timeline">
   
       <div class="step">
-        <img src="images/ascm-logo.png" alt="ASCM">
+        <img src="images/ascm-logo.png" alt="ASCM" />
         <div class="company">ASCM</div>
         <div class="industry">Supply Chain</div>
         <div class="duration">2018 (6 months)</div>
@@ -264,16 +299,20 @@
       </div>
   
       <div class="step">
-        <img src="images/daimler-logo.png" alt="Daimler">
+        <img src="images/daimler-logo.png" alt="Daimler" />
         <div class="company">Daimler</div>
         <div class="industry">Automotive</div>
-        <div class="duration">Jan 2019 – Feb 2020 (1 year)</div>
+        <div class="duration">
+          Jan 2019 – Feb 2020
+          <br />
+          (1 year)
+        </div>
         <h4>Data Scientist</h4>
         <div class="desc">Built strong foundation; built dashboards; applied AI/ML; bridged OpEx, IT, DevOps.</div>
       </div>
   
       <div class="step">
-        <img src="images/jama-logo.png" alt="Jama Software">
+        <img src="images/jama-logo.png" alt="Jama Software" />
         <div class="company">Jama Software</div>
         <div class="industry">Software</div>
         <div class="duration">Mar 2020 – May 2021 (1.5 years)</div>
@@ -282,7 +321,7 @@
       </div>
   
       <div class="step">
-        <img src="images/adidas-logo.png" alt="Adidas">
+        <img src="images/adidas-logo.png" alt="Adidas" />
         <div class="company">Adidas</div>
         <div class="industry">Retail</div>
         <div class="duration">Jun 2021 – Sep 2022 (2.5 years)</div>
@@ -290,8 +329,8 @@
         <div class="desc">Led analytics for supply chain initiatives and collaborated with global teams.</div>
       </div>
   
-      <div class="step">
-        <img src="images/nike-logo.png" alt="Nike">
+      <div class="step nike">
+        <img src="images/nike-logo.png" alt="Nike" />
         <div class="company">Nike</div>
         <div class="industry">Retail</div>
         <div class="duration">Oct 2022 – Present</div>

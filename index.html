@@ -130,8 +130,28 @@
 
 
 <!-- Home Section -->
-<section id="home" style="padding: 60px 20px;">
-  <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; max-width: 1200px; margin: 0 auto;">
+<section id="home" style="padding: 60px 20px; position: relative; overflow: hidden;">
+  
+  <!-- Background image with 50% opacity -->
+  <div style="
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('images/tech_background.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: 1;
+  "></div>
+
+  <!-- Content Container -->
+  <div class="container" style="
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  ">
 
     <!-- Image Column (Left) -->
     <div style="flex: 1 1 35%; text-align: center;">

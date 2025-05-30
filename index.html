@@ -198,69 +198,96 @@
 
 
 <!-- Timeline Section -->
-<section id="timeline" style="background-color: white; padding: 60px 20px;">
-  <h2 class="text-center mb-5" style="font-size: 36px; font-weight: 700; color: #222;">Career Growth Timeline</h2>
-  <div class="timeline">
-    <div class="step">
-      <img src="images/ascm-logo.png" alt="ASCM">
-      <div class="company">ASCM</div>
-      <div class="industry">Supply Chain</div>
-      <div class="duration">
-        <span class="range">2018</span>
-        <span class="length">(6 months)</span>
-      </div>
-      <h4>Case Competition Participant</h4>
-      <div class="desc">Top 6 global team; cut costs 40% via data-driven supply chain optimization.</div>
-    </div>
+<section id="timeline" style="padding: 60px 20px; position: relative; overflow: hidden;">
 
-    <div class="step">
-      <img src="images/daimler-logo.png" alt="Daimler">
-      <div class="company">Daimler</div>
-      <div class="industry">Automotive</div>
-      <div class="duration">
-        <span class="range">Jan 2019 – Feb 2020</span>
-        <span class="length">(1 year)</span>
-      </div>
-      <h4>Data Scientist</h4>
-      <div class="desc">Built strong foundation; built dashboards; applied AI/ML; bridged OpEx, IT, DevOps.</div>
-    </div>
+  <!-- Background image with 50% opacity -->
+  <div style="
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('images/career-progression-logo.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: 1;
+  "></div>
 
-    <div class="step">
-      <img src="images/jama-logo.png" alt="Jama Software">
-      <div class="company">Jama Software</div>
-      <div class="industry">Software</div>
-      <div class="duration">
-        <span class="range">Mar 2020 – May 2021</span>
-        <span class="length">(1.5 years)</span>
-      </div>
-      <h4>Data Analyst</h4>
-      <div class="desc">Owned executive dashboards, drove internal enablement, and automated reporting.</div>
-    </div>
+  <!-- Content Container with white translucent background -->
+  <div style="
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  ">
+    <h2 class="text-center mb-5" style="font-size: 36px; font-weight: 700; color: #222;">Career Growth Timeline</h2>
 
-    <div class="step">
-      <img src="images/adidas-logo.png" alt="Adidas">
-      <div class="company">Adidas</div>
-      <div class="industry">Retail</div>
-      <div class="duration">
-        <span class="range">Jun 2021 – Sep 2022</span>
-        <span class="length">(2.5 years)</span>
+    <div class="timeline">
+      <!-- Example step blocks -->
+      <div class="step">
+        <img src="images/ascm-logo.png" alt="ASCM Logo" />
+        <h4>Senior Consultant</h4>
+        <div class="company">ASCM</div>
+        <div class="industry">Supply Chain</div>
+        <div class="duration">
+          <span class="range">2017 - 2018</span>
+          <span class="length">1 year</span>
+        </div>
+        <div class="desc">Provided data-driven consulting for supply chain optimization.</div>
       </div>
-      <h4>Senior Data Analyst</h4>
-      <div class="desc">Led analytics for supply chain initiatives and collaborated with global teams.</div>
-    </div>
 
-    <div class="step">
-      <img src="images/nike-logo.png" alt="Nike">
-      <div class="company">Nike</div>
-      <div class="industry">Retail</div>
-      <div class="duration">
-        <span class="range">Oct 2022 – Present</span>
+      <div class="step">
+        <img src="images/daimler-logo.png" alt="Daimler Truck Logo" />
+        <h4>Data Analyst</h4>
+        <div class="company">Daimler Truck North America</div>
+        <div class="industry">Automotive</div>
+        <div class="duration">
+          <span class="range">2018 - 2020</span>
+          <span class="length">2 years</span>
+        </div>
+        <div class="desc">Led analytics projects for fleet efficiency and emissions.</div>
       </div>
-      <h4>Data Analytics Manager</h4>
-      <div class="desc">Led tech teams, enhanced data integrity, optimized data validation process, and reduced data refresh time.</div>
+
+      <div class="step">
+        <img src="images/jama-logo.png" alt="Jama Software Logo" />
+        <h4>Data Scientist</h4>
+        <div class="company">Jama Software</div>
+        <div class="industry">Software</div>
+        <div class="duration">
+          <span class="range">2020 - 2021</span>
+          <span class="length">1 year</span>
+        </div>
+        <div class="desc">Built predictive models to improve product quality metrics.</div>
+      </div>
+
+      <div class="step">
+        <img src="images/adidas-logo.png" alt="Adidas Logo" />
+        <h4>Analytics Manager</h4>
+        <div class="company">Adidas</div>
+        <div class="industry">Retail & Sportswear</div>
+        <div class="duration">
+          <span class="range">2021 - 2023</span>
+          <span class="length">2 years</span>
+        </div>
+        <div class="desc">Managed analytics team delivering sales and marketing insights.</div>
+      </div>
+
+      <div class="step">
+        <img src="images/nike-logo.png" alt="Nike Logo" />
+        <h4>Senior Data Analytics Manager</h4>
+        <div class="company">Nike</div>
+        <div class="industry">Retail & Sportswear</div>
+        <div class="duration">
+          <span class="range">2023 - Present</span>
+          <span class="length">Current</span>
+        </div>
+        <div class="desc">Driving data analytics strategy for global product launches.</div>
+      </div>
     </div>
   </div>
 </section>
+
 
 <style>
   body {

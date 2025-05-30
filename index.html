@@ -491,106 +491,86 @@
 </section>
 
 
-<!-- ########## Experience/Clients Section ###########################-->
-<section id="clients-section" style="position: relative; padding: 60px 20px; overflow: hidden;">
-  <!-- Background overlay -->
+<!-- My Journey Section -->
+<section id="journey" style="position: relative; padding: 60px 20px; overflow: hidden;">
+
+  <!-- Background Image Layer -->
   <div style="
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('images/journey-logo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     opacity: 0.5;
-    z-index: 1;">
-  </div>
+    z-index: 0;
+  "></div>
 
-  <!-- Main content -->
-  <div class="container" style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
-    <div class="row">
-      <div class="col-12 mb-5 position-relative text-center">
-        <h2 style="font-size: 36px; font-weight: 700; color: #222;">Clients & Professional Experience</h2>
+  <!-- Content Container -->
+  <div class="container" style="position: relative; z-index: 1; max-width: 1000px; margin: 0 auto; background-color: rgba(255,255,255,0.95); padding: 40px; border-radius: 12px;">
+
+    <!-- Title -->
+    <h2 style="font-size: 36px; font-weight: 700; color: #222; text-align: center; margin-bottom: 40px;">
+      🌟 My Journey: From Jewelry Counter to Data-Driven Leadership
+    </h2>
+
+    <!-- Top Row: Jewelry Store Photo and Opening Story -->
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-start; margin-bottom: 40px;">
+      <!-- Left: Image -->
+      <div style="flex: 1 1 40%; text-align: center;">
+        <img src="images/sales-pic.jpeg" alt="Cindy at jewelry store"
+             style="width: 100%; max-width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      </div>
+      <!-- Right: Text -->
+      <div style="flex: 1 1 60%; padding-left: 30px;">
+        <p style="font-size: 16px; color: #444; line-height: 1.6;">
+          Ten years ago, I arrived in the U.S. with an advanced engineering degree, little English, and a relentless drive to build a better life. As a first-generation college student with no family blueprint to follow, I worked as a sales associate in a jewelry store—saving every dollar and practicing English through daily customer interactions. Within six months, I passed all required entrance exams and proudly enrolled in my first self-funded Master’s degree in Operations & Technology Management.
+        </p>
+        <p style="font-size: 16px; color: #444; line-height: 1.6;">
+          While pursuing my degree, I had no prior experience in data analytics and initially struggled to grasp the technical concepts. I dedicated myself to mastering the fundamentals—studying rigorously, practicing with real-world datasets, and building technical fluency. Navigating a new professional culture while developing skills and building a network from scratch was a major challenge. After countless hours of effort and perseverance, I earned an opportunity at Daimler Truck North America and proudly completed my Master’s degree in just 15 months.
+        </p>
       </div>
     </div>
 
-    <!-- Row 1: Nike & Adidas -->
-    <div class="row mb-4">
-      <!-- Nike -->
-      <div class="col-md-6 mb-4">
-        <div style="background: #fff; border-radius: 12px; padding: 30px; height: 100%; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-          <a href="https://www.nike.com" target="_blank">
-            <img class="img-fluid mb-3" src="images/nike-logo.png" width="160" height="100">
-          </a>
-          <h3>Senior Data Analytics Manager</h3>
-          <p>Nike, Beaverton, OR</p>
-          <p><em>Oct 2022 – Present</em></p>
-          <ul>
-            <li>Led collaboration on Nike's global promo project, aligning technical data design with stakeholder goals.</li>
-            <li>Remediated legacy dashboards to streamline Nike store analytics and improve operational efficiency.</li>
-            <li>Enhanced data integrity by leading development of SEC Bookings pipeline from testing to production.</li>
-            <li>Troubleshot data quality issues for 300+ business users, improving productivity via advanced SQL support.</li>
-            <li>Developed KPIs to drive growth with retail partners and support Nike's wholesale strategy.</li>
-          </ul>
-        </div>
-      </div>
+    <!-- Middle Paragraphs -->
+    <div style="font-size: 16px; color: #444; line-height: 1.7; margin-bottom: 40px;">
+      <p>
+        My career in analytics began at Daimler Truck North America, where I partnered with data scientists on machine learning projects involving telematics data and predictive diagnostics. I developed SQL-based normalization models and built live dashboards that enabled engineering teams to proactively respond to fleet issues. This was my first real taste of using data to drive operational transformation, and I was hooked.
+      </p>
+      <p>
+        At Jama Software, I brought that same mindset into a high-growth tech environment, streamlining product team reporting using Python and REST APIs. I helped agile teams improve sprint planning and operational forecasting by designing custom analytics pipelines that replaced manual tracking processes.
+      </p>
+      <p>
+        My most pivotal role came at Adidas, where I worked as a Senior Data Analyst embedded within the North American supply chain organization. This role gave me end-to-end exposure to logistics, transportation, demand planning, and pricing. I provided key insights that helped reduce shipping inefficiencies, supported pricing decisions that increased revenue, and built dashboards to track performance across multiple supply chain functions. My work empowered cross-functional teams to operate more efficiently and collaboratively, helping improve planning cadence and execution across regions. This was the moment I saw how impactful analytics could be when applied holistically across a business.
+      </p>
+    </div>
 
-      <!-- Adidas -->
-      <div class="col-md-6 mb-4">
-        <div style="background: #fff; border-radius: 12px; padding: 30px; height: 100%; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-          <a href="https://www.adidas.com" target="_blank">
-            <img class="img-fluid mb-3" src="images/adidas-logo.png" width="160" height="100">
-          </a>
-          <h3>Senior Data Analyst</h3>
-          <p>Adidas, Portland, OR</p>
-          <p><em>Jun 2021 – Sep 2022</em></p>
-          <ul>
-            <li>Reduced $10M in split shipping costs through SQL-based root cause analysis.</li>
-            <li>Improved transportation performance by 20% by analyzing carrier KPIs in Tableau.</li>
-            <li>Streamlined DC operations and reduced manual work with Tableau dashboards and SQL automation.</li>
-            <li>Supported Alteryx workflow redesign for demand planning in NAM & EU markets.</li>
-            <li>Led price elasticity analysis, driving 10% revenue growth post-launch.</li>
-          </ul>
-        </div>
+    <!-- Bottom Row: Closing Story and Nike Photo -->
+    <div style="display: flex; flex-wrap: wrap; align-items: center;">
+      <!-- Left: Text -->
+      <div style="flex: 1 1 60%; padding-right: 30px;">
+        <p style="font-size: 16px; color: #444; line-height: 1.7;">
+          Currently, I serve as a Senior Data Analytics Manager at Nike, where I lead global reporting strategy and insight delivery across retail and wholesale functions. I collaborate with 300+ stakeholders, develop enterprise dashboards, and optimize SQL pipelines and KPI frameworks that guide decision-making across multiple lines of business.
+        </p>
+        <p style="font-size: 16px; color: #444; line-height: 1.7;">
+          While managing this fast-paced role at Nike, I also completed my second Master’s degree in Data Analytics at Oregon State University. Balancing graduate school with full-time leadership was demanding—but it was also proof that with grit, purpose, and discipline, anything is possible.
+        </p>
+        <p style="font-size: 16px; color: #444; line-height: 1.7;">
+          I am self-driven, highly collaborative, and grounded in technical excellence. I believe that no matter how difficult the environment, with the right mindset and perseverance, I can make a turnaround—and help others do the same.
+        </p>
+        <p style="font-size: 16px; color: #444; line-height: 1.7; font-weight: 600;">
+          My journey started with a language barrier and a dream. Today, I use data to lead change, empower teams, and deliver measurable impact.
+        </p>
+      </div>
+      <!-- Right: Nike Image -->
+      <div style="flex: 1 1 40%; text-align: center; margin-top: 20px;">
+        <img src="images/Nike-pic.jpeg" alt="Cindy at Nike"
+             style="width: 100%; max-width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
       </div>
     </div>
 
-    <!-- Row 2: Jama & Daimler -->
-    <div class="row">
-      <!-- Jama -->
-      <div class="col-md-6 mb-4">
-        <div style="background: #fff; border-radius: 12px; padding: 30px; height: 100%; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-          <a href="https://www.jamasoftware.com/" target="_blank">
-            <img class="img-fluid mb-3" src="images/jama-logo.png" width="160" height="100">
-          </a>
-          <h3>BI Analyst</h3>
-          <p>Jama Software, Portland, OR</p>
-          <p><em>Mar 2020 – May 2021</em></p>
-          <ul>
-            <li>Improved Scrum team efficiency by 30% using Jira analytics in Tableau.</li>
-            <li>Boosted net income by 40% by delivering analytical insights to Sales & Marketing teams.</li>
-            <li>Automated data extraction using Python with Jira and Git APIs.</li>
-            <li>Developed forecasting models to help project managers track delivery timelines.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Daimler -->
-      <div class="col-md-6 mb-4">
-        <div style="background: #fff; border-radius: 12px; padding: 30px; height: 100%; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-          <a href="https://www.daimlertruck.com/" target="_blank">
-            <img class="img-fluid mb-3" src="images/daimler-logo.png" width="200" height="100">
-          </a>
-          <h3>Data Analyst</h3>
-          <p>Daimler Truck North America, Portland, OR</p>
-          <p><em>Jan 2019 – Feb 2020</em></p>
-          <ul>
-            <li>Analyzed telematics and component data for machine learning model development.</li>
-            <li>Built live Power BI and Tableau dashboards using SQL-based data normalization models.</li>
-            <li>Troubleshot dashboard performance and ensured accuracy of service-level data.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 

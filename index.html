@@ -579,48 +579,81 @@
 <section id="portfolio" class="bg-light">
   <div class="container">
     <h2 class="text-center mb-5">Portfolio Highlights</h2>
-    <div class="row g-4">
-      
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
       <!-- Electricity Cost Analysis -->
-      <div class="col-md-6">
+      <div class="col">
         <div class="card h-100 shadow-sm">
           <div class="card-body">
-            <h5 class="card-title">Electricity Cost Analysis in Oregon</h5>
-            <p class="card-text">Used linear regression and GLMs on ACS data to compare electricity costs across housing types, identifying key predictors and optimal model performance.</p>
+            <h5 class="card-title">🔌 Electricity Cost Analysis in Oregon</h5>
+            <p class="card-text">
+              Analyzed ACS housing data using linear regression and GLM to compare electricity costs across housing types in Oregon, identifying key predictors and optimizing model performance for both explanation and prediction.
+              <ul>
+                <li>Analyzed ACS household data to assess electricity cost differences between houses and apartments.</li>
+                <li>Built and compared 3 models (Linear Regression & GLM) for both explanatory and predictive insights.</li>
+                <li>Identified key predictors: housing type, number of people, fuel type, and building structure.</li>
+                <li>Model 2 achieved best performance (lowest MSE/MAE, highest R², lowest AIC/BIC).</li>
+              </ul>
+              <strong>Skills:</strong> R, data wrangling, EDA, ggplot2, linear regression, GLM, model evaluation
+            </p>
             <a href="https://github.com/dchen-win/electricity-cost-analysis" target="_blank" class="btn btn-primary btn-sm">View Project</a>
           </div>
         </div>
       </div>
 
-      <!-- Flight Delay Visualization -->
-      <div class="col-md-6">
+      <!-- Stack Exchange Analysis -->
+      <div class="col">
         <div class="card h-100 shadow-sm">
           <div class="card-body">
-            <h5 class="card-title">Flight Delay Visualization</h5>
-            <p class="card-text">Designed alternative ggplot2 visualizations for Houston airport delay data, enabling better operational insights for airport management.</p>
-            <a href="https://github.com/cindychen/flight-delay-viz" target="_blank" class="btn btn-primary btn-sm">View Project</a>
+            <h5 class="card-title">Stack Exchange User Engagement Analysis</h5>
+            <p class="card-text">
+              Analyzed user behavior and engagement trends on Stack Exchange through an end-to-end cloud-based analytics pipeline.
+              <ul>
+                <li><strong>Highlights:</strong></li>
+                <li>Extracted and parsed ~1GB of XML data from the Stack Exchange API.</li>
+                <li>Built ETL pipeline using Scala Spark and Google BigQuery for scalable processing.</li>
+                <li>Created Power BI dashboards to explore trends in posts, comments, accepted answers, and user registrations.</li>
+                <li>Identified key engagement shifts (e.g., declining answer rates, peak user growth in 2015–2016).</li>
+                <li>Overcame technical challenges with XML parsing and GCP permissions.</li>
+              </ul>
+              <strong>Skills & Tools:</strong>
+              <ul>
+                <li>ETL Pipeline: Python, Scala Spark, Google Cloud Storage, BigQuery</li>
+                <li>Data Engineering: XML parsing, DataFrames, schema mapping</li>
+                <li>Data Visualization: Power BI (dashboarding, storytelling)</li>
+                <li>Analysis: Descriptive statistics, trend analysis, ERD modeling</li>
+                <li>Collaboration: Cloud-based teamwork, version control, joint debugging</li>
+              </ul>
+            </p>
+            <a href="https://github.com/dchen-win/stack-exchange-user-engagement-analysis" target="_blank" class="btn btn-primary btn-sm">View Project</a>
           </div>
         </div>
       </div>
 
-      <!-- Logistic Regression on Census Data -->
-      <div class="col-md-6">
+      <!-- Logistic Regression Census -->
+      <div class="col">
         <div class="card h-100 shadow-sm">
           <div class="card-body">
             <h5 class="card-title">Logistic Regression on U.S. Census Data</h5>
-            <p class="card-text">Explored how education impacts income using logistic regression on Census data, achieving strong predictive performance and interpretable results.</p>
+            <p class="card-text">
+              Analyzed the 1994 U.S. Census "Adult" dataset to explore how education impacts income levels using logistic regression.
+              <ul>
+                <li><strong>Highlights:</strong></li>
+                <li>Built simple and multiple logistic regression models to predict income &gt;$50K.</li>
+                <li>Controlled for age, marital status, occupation, and work hours.</li>
+                <li>Achieved AUC = 0.88 with strong model interpretability.</li>
+                <li>Created visualizations (e.g., dot-and-whisker plot, PCA biplot) to communicate results.</li>
+                <li>Organized project with clean, reproducible code and documentation.</li>
+              </ul>
+              <strong>Skills & Tools:</strong>
+              <ul>
+                <li>R, ggplot2, dplyr, broom</li>
+                <li>Statistical modeling: logistic regression, PCA</li>
+                <li>Evaluation: accuracy, precision, recall, F1, ROC/AUC</li>
+                <li>EDA & Visualization: correlation heatmaps, income trends, odds ratio plots</li>
+              </ul>
+            </p>
             <a href="https://github.com/dchen-win/logistic-regression-census-education-income" target="_blank" class="btn btn-primary btn-sm">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Stack Exchange Engagement Analysis -->
-      <div class="col-md-6">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Stack Exchange Engagement Analysis</h5>
-            <p class="card-text">Built a full cloud-based ETL pipeline to analyze user trends across posts and comments, delivering actionable insights via Power BI dashboards.</p>
-            <a href="https://github.com/dchen-win/stack-exchange-user-engagement-analysis" target="_blank" class="btn btn-primary btn-sm">View Project</a>
           </div>
         </div>
       </div>

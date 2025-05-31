@@ -578,23 +578,23 @@
 <!-- Portfolio Section -->
 <section id="portfolio" class="bg-light">
   <div class="container">
-    <h2 class="text-center mb-5">Portfolio Highlights</h2>
+    <h2 class="text-center mb-5">Portfolio</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
 
       <!-- Electricity Cost Analysis -->
       <div class="col">
         <div class="card h-100 shadow-sm">
           <div class="card-body">
-            <h5 class="card-title">🔌 Electricity Cost Analysis in Oregon</h5>
+            <h5 class="card-title">Electricity Cost Analysis in Oregon</h5>
             <p class="card-text">
-              Analyzed ACS housing data using linear regression and GLM to compare electricity costs across housing types in Oregon, identifying key predictors and optimizing model performance for both explanation and prediction.
+              Compared electricity costs across housing types in Oregon using ACS data and regression models. Evaluated three models to identify important predictors and the best fit.
               <ul>
-                <li>Analyzed ACS household data to assess electricity cost differences between houses and apartments.</li>
-                <li>Built and compared 3 models (Linear Regression & GLM) for both explanatory and predictive insights.</li>
-                <li>Identified key predictors: housing type, number of people, fuel type, and building structure.</li>
-                <li>Model 2 achieved best performance (lowest MSE/MAE, highest R², lowest AIC/BIC).</li>
+                <li>Assessed cost differences between houses and apartments.</li>
+                <li>Used linear regression and GLM for explanation and prediction.</li>
+                <li>Found housing type, household size, fuel, and structure relevant.</li>
+                <li>Model 2 performed best by multiple metrics.</li>
               </ul>
-              <strong>Skills:</strong> R, data wrangling, EDA, ggplot2, linear regression, GLM, model evaluation
+              Tools: R, data wrangling, ggplot2, regression, model evaluation
             </p>
             <a href="https://github.com/dchen-win/electricity-cost-analysis" target="_blank" class="btn btn-primary btn-sm">View Project</a>
           </div>
@@ -607,23 +607,15 @@
           <div class="card-body">
             <h5 class="card-title">Stack Exchange User Engagement Analysis</h5>
             <p class="card-text">
-              Analyzed user behavior and engagement trends on Stack Exchange through an end-to-end cloud-based analytics pipeline.
+              Analyzed user engagement trends on Stack Exchange using a cloud-based ETL pipeline and dashboards.
               <ul>
-                <li><strong>Highlights:</strong></li>
-                <li>Extracted and parsed ~1GB of XML data from the Stack Exchange API.</li>
-                <li>Built ETL pipeline using Scala Spark and Google BigQuery for scalable processing.</li>
-                <li>Created Power BI dashboards to explore trends in posts, comments, accepted answers, and user registrations.</li>
-                <li>Identified key engagement shifts (e.g., declining answer rates, peak user growth in 2015–2016).</li>
-                <li>Overcame technical challenges with XML parsing and GCP permissions.</li>
+                <li>Processed ~1GB XML data from API.</li>
+                <li>Built scalable ETL with Scala Spark and BigQuery.</li>
+                <li>Created Power BI dashboards to explore activity trends.</li>
+                <li>Observed shifts in answer rates and user growth.</li>
+                <li>Resolved XML parsing and cloud permission challenges.</li>
               </ul>
-              <strong>Skills & Tools:</strong>
-              <ul>
-                <li>ETL Pipeline: Python, Scala Spark, Google Cloud Storage, BigQuery</li>
-                <li>Data Engineering: XML parsing, DataFrames, schema mapping</li>
-                <li>Data Visualization: Power BI (dashboarding, storytelling)</li>
-                <li>Analysis: Descriptive statistics, trend analysis, ERD modeling</li>
-                <li>Collaboration: Cloud-based teamwork, version control, joint debugging</li>
-              </ul>
+              Tools: Python, Scala Spark, GCP, Power BI, data engineering, visualization
             </p>
             <a href="https://github.com/dchen-win/stack-exchange-user-engagement-analysis" target="_blank" class="btn btn-primary btn-sm">View Project</a>
           </div>
@@ -636,22 +628,14 @@
           <div class="card-body">
             <h5 class="card-title">Logistic Regression on U.S. Census Data</h5>
             <p class="card-text">
-              Analyzed the 1994 U.S. Census "Adult" dataset to explore how education impacts income levels using logistic regression.
+              Used logistic regression on 1994 Census data to study the impact of education on income above $50K, controlling for demographic factors.
               <ul>
-                <li><strong>Highlights:</strong></li>
-                <li>Built simple and multiple logistic regression models to predict income &gt;$50K.</li>
-                <li>Controlled for age, marital status, occupation, and work hours.</li>
-                <li>Achieved AUC = 0.88 with strong model interpretability.</li>
-                <li>Created visualizations (e.g., dot-and-whisker plot, PCA biplot) to communicate results.</li>
-                <li>Organized project with clean, reproducible code and documentation.</li>
+                <li>Built simple and multiple logistic models.</li>
+                <li>Achieved AUC of 0.88 with interpretable results.</li>
+                <li>Visualized findings with plots and PCA biplot.</li>
+                <li>Maintained clean, reproducible code and documentation.</li>
               </ul>
-              <strong>Skills & Tools:</strong>
-              <ul>
-                <li>R, ggplot2, dplyr, broom</li>
-                <li>Statistical modeling: logistic regression, PCA</li>
-                <li>Evaluation: accuracy, precision, recall, F1, ROC/AUC</li>
-                <li>EDA & Visualization: correlation heatmaps, income trends, odds ratio plots</li>
-              </ul>
+              Tools: R, ggplot2, dplyr, logistic regression, PCA, model evaluation
             </p>
             <a href="https://github.com/dchen-win/logistic-regression-census-education-income" target="_blank" class="btn btn-primary btn-sm">View Project</a>
           </div>

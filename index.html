@@ -129,143 +129,95 @@
 
 
 
-<style>
-  /* Full page background */
-  body, html {
-    margin: 0; padding: 0; height: 100%;
-    background: url('images/future-logo.png') no-repeat center center fixed;
-    background-size: cover;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-  }
+<section id="home" style="
+  position: relative; 
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 40px 20px; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  color: #333;
+  overflow: hidden;
+">
 
-  /* Content container box */
-  #home {
-    max-width: 800px;
-    margin: 60px auto;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-  }
+  <!-- Background image with 50% opacity -->
+  <div style="
+    position: absolute; 
+    top: 0; left: 0; right: 0; bottom: 0; 
+    background: url('images/future-logo.png') center center no-repeat; 
+    background-size: contain;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
+  "></div>
 
-  /* Flex layout */
-  #home .intro-flex {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-  }
+  <!-- Content container, above background -->
+  <div style="
+    position: relative; 
+    background: white; 
+    padding: 30px 40px; 
+    border-radius: 12px; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    z-index: 1;
+  ">
 
-  #home .intro-flex img {
-    width: 240px;
-    height: auto;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    border-radius: 0; /* original shape */
-  }
-
-  #home .intro-text {
-    flex: 1 1 300px;
-    min-width: 250px;
-  }
-
-  #home h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #111;
-    margin-bottom: 12px;
-  }
-
-  #home .title-highlight {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #0072CE;
-    margin-bottom: 6px;
-  }
-
-  #home .quote {
-    font-style: italic;
-    color: #555;
-    font-size: 1.1rem;
-    margin-bottom: 24px;
-  }
-
-  #home p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #444;
-    margin-bottom: 20px;
-  }
-
-  #home h2 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin-bottom: 12px;
-    color: #222;
-  }
-
-  #home ul {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 40px;
-    color: #444;
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
-
-  #home ul li {
-    margin-bottom: 8px;
-  }
-
-  /* Social links */
-  #home .social-links {
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  #home .social-links a {
-    margin: 0 12px;
-    font-size: 28px;
-    color: #0072CE;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  #home .social-links a:hover {
-    color: #005999;
-  }
-</style>
-
-<section id="home">
-  <div class="intro-flex">
-    <img src="images/Prof.JPG" alt="Cindy Chen" />
-    <div class="intro-text">
-      <h1>Hello, I'm Cindy Chen</h1>
-      <p class="title-highlight">Senior BI Analyst | Analytics Manager | Problem Solver | Aspiring Data Scientist</p>
-      <p class="quote">"Turning data complexity into simple stories that drive impact."</p>
-      <p>I help organizations unlock the power of their data to drive smarter decisions and meaningful business growth. With 8+ years of experience at Nike, Daimler, and Adidas, I transform complex data into clear, actionable insights that move the needle.</p>
+    <!-- Greeting and Photo -->
+    <div style="display: flex; align-items: center; gap: 24px; margin-bottom: 30px; flex-wrap: wrap;">
+      <div style="flex: 1 1 240px; max-width: 240px;">
+        <img src="images/Prof.JPG" alt="Cindy Chen" style="
+          width: 120%;  /* 20% bigger */
+          height: auto;
+          border-radius: 50%; 
+          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        " />
+      </div>
+      <div style="flex: 2 1 300px; min-width: 250px;">
+        <h1 style="font-size: 2.8rem; font-weight: 700; color: #111; margin-bottom: 12px;">
+          Hello, I'm Cindy Chen
+        </h1>
+        <p style="font-size: 1.2rem; font-weight: 600; color: #0072CE; margin-bottom: 6px;">
+          Senior BI Analyst | Analytics Manager | Problem Solver | Aspiring Data Scientist
+        </p>
+        <p style="font-style: italic; color: #555; font-size: 1.1rem;">
+          Turning data complexity into simple stories that drive impact.
+        </p>
+      </div>
     </div>
-  </div>
 
-  <h2>What I Do</h2>
-  <p>As a seasoned analytics leader, I specialize in:</p>
-  <ul>
-    <li>✔️ Building scalable data pipelines and dashboards using <strong>SQL, Python, and R</strong></li>
-    <li>✔️ Crafting impactful data visualizations with <strong>Tableau and Power BI</strong></li>
-    <li>✔️ Applying advanced statistical modeling and predictive analytics</li>
-    <li>✔️ Leveraging cloud platforms like <strong>Azure, AWS, and GCP</strong> for data solutions</li>
-  </ul>
+    <!-- Intro paragraph -->
+    <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px;">
+      I help organizations unlock the power of their data to drive smarter decisions and meaningful business growth. With 8+ years of experience at Nike, Daimler, and Adidas, I transform complex data into clear, actionable insights that move the needle.
+    </p>
 
-  <p>I’m passionate about clear communication and turning data complexity into simple, powerful stories that inspire action.</p>
+    <!-- Skills & Expertise -->
+    <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 12px; color: #222;">What I Do</h2>
+    <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px;">
+      As a seasoned analytics leader, I specialize in:
+    </p>
+    <ul style="list-style: none; padding-left: 0; margin-bottom: 40px; color: #444; font-size: 1.1rem; line-height: 1.5;">
+      <li>✔️ Building scalable data pipelines and dashboards using <strong>SQL, Python, and R</strong></li>
+      <li>✔️ Crafting impactful data visualizations with <strong>Tableau and Power BI</strong></li>
+      <li>✔️ Applying advanced statistical modeling and predictive analytics</li>
+      <li>✔️ Leveraging cloud platforms like <strong>Azure, and Snowflake</strong> for data solutions</li>
+    </ul>
 
-  <div class="social-links">
-    <a href="https://www.linkedin.com/in/chendi20" target="_blank" aria-label="LinkedIn">
-      <i class="bi bi-linkedin"></i>
-    </a>
-    <a href="https://github.com/dchen-win" target="_blank" aria-label="GitHub">
-      <i class="bi bi-github"></i>
-    </a>
+    <!-- Closing paragraph -->
+    <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 40px;">
+      I’m passionate about clear communication and turning data complexity into simple, powerful stories that inspire action.
+    </p>
+
+    <!-- Social Links -->
+    <div class="social-links" style="margin-top: 20px; text-align: center;">
+      <a href="https://www.linkedin.com/in/chendi20" target="_blank" aria-label="LinkedIn" style="margin: 0 12px; font-size: 28px; color: #0072CE; text-decoration: none;">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a href="https://github.com/dchen-win" target="_blank" aria-label="GitHub" style="margin: 0 12px; font-size: 28px; color: #000; text-decoration: none;">
+        <i class="bi bi-github"></i>
+      </a>
+    </div>
+
   </div>
 </section>
 

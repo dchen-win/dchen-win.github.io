@@ -491,7 +491,7 @@
 </section>
 
 
-<!-- My Journey Section (Condensed Version) -->
+<!-- My Journey Section -->
 <section id="journey" style="position: relative; padding: 60px 20px; overflow: hidden;">
 
   <!-- Background Image Layer -->
@@ -516,43 +516,135 @@
       🌟 My Journey: From Jewelry Counter to Data-Driven Leadership
     </h2>
 
-    <!-- Story Section -->
-    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px;">
-      <!-- Image -->
+    <!-- Top Row: Jewelry Store Photo and Opening Story -->
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-start; margin-bottom: 40px;">
+      <!-- Left: Image -->
       <div style="flex: 1 1 40%; text-align: center;">
         <img src="images/sales-pic.jpeg" alt="Cindy at jewelry store"
              style="width: 100%; max-width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
       </div>
+      <!-- Right: Text -->
+      <div style="flex: 1 1 60%; padding-left: 30px;">
+        <p style="font-size: 16px; color: #444; line-height: 1.6;">
+          Ten years ago, I arrived in the U.S. with an advanced engineering degree, little English, and a relentless drive to build a better life. As a first-generation college student with no family blueprint to follow, I worked as a sales associate in a jewelry store—saving every dollar and practicing English through daily customer interactions. Within six months, I passed all required entrance exams and proudly enrolled in my first self-funded Master’s degree in Operations & Technology Management.
+        </p>
+        <p style="font-size: 16px; color: #444; line-height: 1.6;">
+          While pursuing my degree, I had no prior experience in data analytics and initially struggled to grasp the technical concepts. I dedicated myself to mastering the fundamentals—studying rigorously, practicing with real-world datasets, and building technical fluency. Navigating a new professional culture while developing skills and building a network from scratch was a major challenge. After countless hours of effort and perseverance, I earned an opportunity at Daimler Truck North America and proudly completed my Master’s degree in just 15 months.
+        </p>
+      </div>
+    </div>
 
-      <!-- Text -->
-      <div style="flex: 1 1 60%;">
-        <p style="font-size: 16px; color: #444; line-height: 1.6;">
-          I arrived in the U.S. with an engineering degree, little English, and a dream. My first job? Selling jewelry—where I practiced English, saved every dollar, and earned entry to my first Master’s in Operations & Technology Management.
+    <!-- Middle Paragraphs -->
+    <div style="font-size: 16px; color: #444; line-height: 1.7; margin-bottom: 40px;">
+      <p>
+        My career in analytics began at Daimler Truck North America, where I partnered with data scientists on machine learning projects involving telematics data and predictive diagnostics. I developed SQL-based normalization models and built live dashboards that enabled engineering teams to proactively respond to fleet issues. This was my first real taste of using data to drive operational transformation, and I was hooked.
+      </p>
+      <p>
+        At Jama Software, I brought that same mindset into a high-growth tech environment, streamlining product team reporting using Python and REST APIs. I helped agile teams improve sprint planning and operational forecasting by designing custom analytics pipelines that replaced manual tracking processes.
+      </p>
+      <p>
+        My most pivotal role came at Adidas, where I worked as a Senior Data Analyst embedded within the North American supply chain organization. This role gave me end-to-end exposure to logistics, transportation, demand planning, and pricing. I provided key insights that helped reduce shipping inefficiencies, supported pricing decisions that increased revenue, and built dashboards to track performance across multiple supply chain functions. My work empowered cross-functional teams to operate more efficiently and collaboratively, helping improve planning cadence and execution across regions. This was the moment I saw how impactful analytics could be when applied holistically across a business.
+      </p>
+    </div>
+
+    <!-- Bottom Row: Closing Story and Nike Photo -->
+    <div style="display: flex; flex-wrap: wrap; align-items: center;">
+      <!-- Left: Text -->
+      <div style="flex: 1 1 60%; padding-right: 30px;">
+        <p style="font-size: 16px; color: #444; line-height: 1.7;">
+          Currently, I serve as a Senior Data Analytics Manager at Nike, where I lead global reporting strategy and insight delivery across retail and wholesale functions. I collaborate with 300+ stakeholders, develop enterprise dashboards, and optimize SQL pipelines and KPI frameworks that guide decision-making across multiple lines of business.
         </p>
-        <p style="font-size: 16px; color: #444; line-height: 1.6;">
-          At Daimler Truck, I built analytics tools with SQL and dashboards that influenced engineering decisions. At Jama Software, I automated reporting pipelines and empowered agile teams.
+        <p style="font-size: 16px; color: #444; line-height: 1.7;">
+          While managing this fast-paced role at Nike, I also completed my second Master’s degree in Data Analytics at Oregon State University. Balancing graduate school with full-time leadership was demanding—but it was also proof that with grit, purpose, and discipline, anything is possible.
         </p>
-        <p style="font-size: 16px; color: #444; line-height: 1.6;">
-          At Adidas, I applied analytics to supply chain, pricing, and demand—delivering insights that increased efficiency and revenue. Now at Nike, I lead reporting strategy and stakeholder engagement across global retail and wholesale functions.
+        <p style="font-size: 16px; color: #444; line-height: 1.7;">
+          I am self-driven, highly collaborative, and grounded in technical excellence. I believe that no matter how difficult the environment, with the right mindset and perseverance, I can make a turnaround—and help others do the same.
         </p>
-        <p style="font-size: 16px; color: #444; line-height: 1.6; font-weight: 600;">
-          I balance leadership at Nike with a second Master's in Data Analytics. My journey began with a language barrier—and today, I drive decisions with data.
+        <p style="font-size: 16px; color: #444; line-height: 1.7; font-weight: 600;">
+          My journey started with a language barrier and a dream. Today, I use data to lead change, empower teams, and deliver measurable impact.
         </p>
+      </div>
+      <!-- Right: Nike Image -->
+      <div style="flex: 1 1 40%; text-align: center; margin-top: 20px;">
+        <img src="images/Nike-pic.jpeg" alt="Cindy at Nike"
+             style="width: 100%; max-width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
       </div>
     </div>
 
   </div>
 </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <!-- Bootstrap CSS CDN for styling (optional) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
+  <style>
+    /* Portfolio section with background image and overlay */
+    #portfolio {
+      position: relative;
+      background-image: url('images/portfolio.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #add8e6; /* light blue fallback */
+      padding: 60px 0;
+    }
+
+    /* 50% transparent white overlay */
+    #portfolio::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.5);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Make sure container content is above overlay */
+    #portfolio > .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Optional: adjust card styles for better readability on background */
+    #portfolio .card {
+      background-color: rgba(255, 255, 255, 0.85);
+      border: none;
+    }
+
+    /* Center images inside cards */
+    .card-img-top {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      margin: 1.5rem auto 0;
+      display: block;
+    }
+
+    /* Card text styling */
+    #portfolio p, 
+    #portfolio ul {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    #portfolio ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
 
 <!-- Portfolio Section -->
 <section id="portfolio" class="bg-light">
   <div class="container">
-    <h2 class="text-center mb-5" style="font-size: 32px; font-weight: 700; color: #333;">
-      Portfolio
-    </h2>
+    <h2 class="text-center mb-5">Portfolio</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
-
 
       <!-- Electricity Cost Analysis -->
       <div class="col">

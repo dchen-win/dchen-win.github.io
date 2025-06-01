@@ -132,7 +132,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Cindy Chen | Data Analyst</title>
   <style>
     body {
@@ -143,31 +143,34 @@
       color: #333;
     }
 
+    /* Main container */
     #home {
       position: relative;
       max-width: 800px;
       margin: 60px auto;
       padding: 40px 30px;
       border-radius: 12px;
-      background-color: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
       overflow: hidden;
-      z-index: 0;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
     }
 
-    #home .background-image {
+    /* Background image only for home */
+    #home::before {
+      content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background-image: url('images/future-logo.png');
+      background: url('images/future-logo.png') no-repeat center center;
       background-size: cover;
-      background-position: center;
       opacity: 0.5;
       z-index: 1;
-      pointer-events: none;
     }
 
+    /* Foreground white box and content */
     #home .content {
       position: relative;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      padding: 0;
       z-index: 2;
     }
 
@@ -177,12 +180,13 @@
       gap: 24px;
       margin-bottom: 30px;
       flex-wrap: wrap;
+      padding: 40px 30px 0;
     }
 
     .intro-flex img {
       width: 240px;
       height: auto;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .intro-text {
@@ -221,14 +225,14 @@
     h2 {
       font-size: 1.6rem;
       font-weight: 700;
-      margin-bottom: 12px;
+      margin: 30px 30px 12px;
       color: #222;
     }
 
     ul {
       list-style: none;
-      padding-left: 0;
-      margin-bottom: 40px;
+      padding-left: 30px;
+      margin: 0 0 40px;
       color: #444;
       font-size: 1.1rem;
       line-height: 1.5;
@@ -240,7 +244,7 @@
 
     .social-links {
       text-align: center;
-      margin-top: 20px;
+      padding-bottom: 30px;
     }
 
     .social-links a {
@@ -259,10 +263,8 @@
 <body>
 
   <section id="home">
-    <!-- Background Image -->
-    <div class="background-image"></div>
+    <!-- Semi-transparent background handled by CSS ::before -->
 
-    <!-- Foreground Content -->
     <div class="content">
       <div class="intro-flex">
         <img src="images/Prof.JPG" alt="Cindy Chen" />
@@ -275,7 +277,7 @@
       </div>
 
       <h2>What I Do</h2>
-      <p>As a seasoned analytics leader, I specialize in:</p>
+      <p style="padding: 0 30px;">As a seasoned analytics leader, I specialize in:</p>
       <ul>
         <li>✔️ Building scalable data pipelines and dashboards using <strong>SQL, Python, and R</strong></li>
         <li>✔️ Crafting impactful data visualizations with <strong>Tableau and Power BI</strong></li>
@@ -283,7 +285,7 @@
         <li>✔️ Leveraging cloud platforms like <strong>Azure, AWS, and GCP</strong> for data solutions</li>
       </ul>
 
-      <p>I’m passionate about clear communication and turning data complexity into simple, powerful stories that inspire action.</p>
+      <p style="padding: 0 30px;">I’m passionate about clear communication and turning data complexity into simple, powerful stories that inspire action.</p>
 
       <div class="social-links">
         <a href="https://www.linkedin.com/in/chendi20" target="_blank" aria-label="LinkedIn">
@@ -295,8 +297,6 @@
       </div>
     </div>
   </section>
-
-
 
 
 

@@ -573,7 +573,72 @@
 
   </div>
 </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <!-- Bootstrap CSS CDN for styling (optional) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
+  <style>
+    /* Portfolio section with background image and overlay */
+    #portfolio {
+      position: relative;
+      background-image: url('images/portfolio.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #add8e6; /* light blue fallback */
+      padding: 60px 0;
+    }
+
+    /* 50% transparent white overlay */
+    #portfolio::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.5);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Make sure container content is above overlay */
+    #portfolio > .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Optional: adjust card styles for better readability on background */
+    #portfolio .card {
+      background-color: rgba(255, 255, 255, 0.85);
+      border: none;
+    }
+
+    /* Center images inside cards */
+    .card-img-top {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      margin: 1.5rem auto 0;
+      display: block;
+    }
+
+    /* Card text styling */
+    #portfolio p, 
+    #portfolio ul {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    #portfolio ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
 
 <!-- Portfolio Section -->
 <section id="portfolio" class="bg-light">

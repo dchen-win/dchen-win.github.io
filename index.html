@@ -137,24 +137,20 @@
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f5f5f5;
+      background-color: #f5f5f5;
       color: #333;
     }
 
-    /* Main container */
+    /* Full home section */
     #home {
       position: relative;
-      max-width: 800px;
-      margin: 60px auto;
-      padding: 40px 30px;
-      border-radius: 12px;
+      width: 100%;
+      padding: 60px 20px;
       overflow: hidden;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
     }
 
-    /* Background image only for home */
+    /* Background image layer */
     #home::before {
       content: "";
       position: absolute;
@@ -165,37 +161,39 @@
       z-index: 1;
     }
 
-    /* Foreground white box and content */
-    #home .content {
+    /* Foreground content wrapper */
+    .home-content {
       position: relative;
       background-color: rgba(255, 255, 255, 0.95);
+      padding: 40px 30px;
       border-radius: 12px;
-      padding: 0;
+      max-width: 900px;
+      margin: 0 auto;
       z-index: 2;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
     .intro-flex {
       display: flex;
       align-items: center;
       gap: 24px;
-      margin-bottom: 30px;
       flex-wrap: wrap;
-      padding: 40px 30px 0;
+      margin-bottom: 30px;
     }
 
     .intro-flex img {
       width: 240px;
       height: auto;
+      border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .intro-text {
       flex: 1 1 300px;
-      min-width: 250px;
     }
 
     h1 {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       font-weight: 700;
       color: #111;
       margin-bottom: 12px;
@@ -225,26 +223,31 @@
     h2 {
       font-size: 1.6rem;
       font-weight: 700;
-      margin: 30px 30px 12px;
+      margin: 30px 0 12px;
       color: #222;
     }
 
     ul {
       list-style: none;
-      padding-left: 30px;
-      margin: 0 0 40px;
-      color: #444;
-      font-size: 1.1rem;
-      line-height: 1.5;
+      padding-left: 0;
+      margin: 0 0 30px;
     }
 
     ul li {
       margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "✔️";
+      position: absolute;
+      left: 0;
     }
 
     .social-links {
       text-align: center;
-      padding-bottom: 30px;
+      padding-top: 10px;
     }
 
     .social-links a {
@@ -263,9 +266,7 @@
 <body>
 
   <section id="home">
-    <!-- Semi-transparent background handled by CSS ::before -->
-
-    <div class="content">
+    <div class="home-content">
       <div class="intro-flex">
         <img src="images/Prof.JPG" alt="Cindy Chen" />
         <div class="intro-text">
@@ -277,23 +278,19 @@
       </div>
 
       <h2>What I Do</h2>
-      <p style="padding: 0 30px;">As a seasoned analytics leader, I specialize in:</p>
+      <p>As a seasoned analytics leader, I specialize in:</p>
       <ul>
-        <li>✔️ Building scalable data pipelines and dashboards using <strong>SQL, Python, and R</strong></li>
-        <li>✔️ Crafting impactful data visualizations with <strong>Tableau and Power BI</strong></li>
-        <li>✔️ Applying advanced statistical modeling and predictive analytics</li>
-        <li>✔️ Leveraging cloud platforms like <strong>Azure, AWS, and GCP</strong> for data solutions</li>
+        <li>Building scalable data pipelines and dashboards using <strong>SQL, Python, and R</strong></li>
+        <li>Crafting impactful data visualizations with <strong>Tableau and Power BI</strong></li>
+        <li>Applying advanced statistical modeling and predictive analytics</li>
+        <li>Leveraging cloud platforms like <strong>Azure, AWS, and GCP</strong> for data solutions</li>
       </ul>
 
-      <p style="padding: 0 30px;">I’m passionate about clear communication and turning data complexity into simple, powerful stories that inspire action.</p>
+      <p>I’m passionate about clear communication and turning data complexity into simple, powerful stories that inspire action.</p>
 
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/chendi20" target="_blank" aria-label="LinkedIn">
-          <i class="bi bi-linkedin"></i>
-        </a>
-        <a href="https://github.com/dchen-win" target="_blank" aria-label="GitHub">
-          <i class="bi bi-github"></i>
-        </a>
+        <a href="https://www.linkedin.com/in/chendi20" target="_blank" aria-label="LinkedIn">🔗</a>
+        <a href="https://github.com/dchen-win" target="_blank" aria-label="GitHub">💻</a>
       </div>
     </div>
   </section>

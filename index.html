@@ -1,1083 +1,629 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cindy Chen | Data Scientist Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>document.documentElement.classList.add('js');</script>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+<title>Cindy Chen | Analytics Leader &amp; Data Scientist</title>
+<meta name="description" content="Cindy Chen is a Senior Data Analytics Manager at Nike with 8+ years of experience in SQL, Python, R, Tableau and machine learning, and an M.S. in Data Analytics. See her results, experience and data science projects.">
+<link rel="canonical" href="https://dchen-win.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B6B64'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='28' font-weight='700' text-anchor='middle' fill='white'%3ECC%3C/text%3E%3C/svg%3E">
 
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<!-- Link previews (LinkedIn, Slack, iMessage, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cindy Chen | Analytics Leader &amp; Data Scientist">
+<meta property="og:description" content="Senior Data Analytics Manager at Nike. SQL, Python, R, Tableau, forecasting and machine learning, with measurable results across retail, supply chain and software.">
+<meta property="og:url" content="https://dchen-win.github.io/">
+<meta property="og:image" content="https://dchen-win.github.io/images/Prof.JPG">
+<meta name="twitter:card" content="summary">
 
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Cindy Chen",
+  "jobTitle": "Senior Data Analytics Manager",
+  "worksFor": { "@type": "Organization", "name": "Nike" },
+  "url": "https://dchen-win.github.io/",
+  "image": "https://dchen-win.github.io/images/Prof.JPG",
+  "sameAs": [
+    "https://www.linkedin.com/in/chendi20",
+    "https://github.com/dchen-win"
+  ],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Oregon State University" },
+    { "@type": "CollegeOrUniversity", "name": "University of Portland" }
+  ],
+  "knowsAbout": ["Analytics leadership", "Data science", "SQL", "Python", "R", "Tableau", "Power BI", "Forecasting", "Machine learning"]
+}
+</script>
 
-  <!-- Custom CSS -->
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      scroll-behavior: smooth;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    h1, h2, h3 {
-      font-family: 'Arbutus Slab', serif;
-      font-weight: 700;
-    }
-    /* Navbar */
-    .navbar {
-      background-color: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 1030;
-    }
-    .navbar-brand {
-      font-family: 'Arbutus Slab', serif;
-      font-weight: 700;
-      font-size: 1.8rem;
-      color: #111;
-    }
-    .nav-link {
-      font-weight: 600;
-      color: #555;
-      transition: color 0.3s ease;
-    }
-    .nav-link:hover, .nav-link.active {
-      color: #007bff;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-    /* Sections */
-    section {
-      padding: 80px 0;
-    }
-    .container {
-      max-width: 960px;
-    }
+<style>
+:root{
+  --bg:#F3F6F6; --surface:#FFFFFF; --ink:#13212B; --muted:#4A5B66; --line:#D5DDDC;
+  --teal:#0B6B64; --on-teal:#FFFFFF; --teal-bg:#E0F0EE;
+  --plum:#5B3A8C; --plum-bg:#EEE8F7;
+  --hero:#0F2D3D; --on-hero:#F2F7F6; --on-hero-muted:#B9CED3; --hero-accent:#7FDCD1;
+  --shadow:0 12px 32px rgba(15,45,61,.14);
+  --shadow-sm:0 2px 8px rgba(15,45,61,.08);
+  --head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
+  --wrap:1120px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0B161C; --surface:#13242C; --ink:#E7EEEC; --muted:#A5B6BD; --line:#26404A;
+    --teal:#52C7BC; --on-teal:#06201E; --teal-bg:#12343A;
+    --plum:#C3A9F0; --plum-bg:#2A2144;
+    --shadow:0 12px 32px rgba(0,0,0,.45);
+    --shadow-sm:0 2px 8px rgba(0,0,0,.35);
+  }
+}
 
-    /* Profile Image */
-    .profile-img {
-      max-width: 250px;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-      margin-bottom: 1rem;
-    }
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.02rem/1.6 var(--body)}
+img{max-width:100%;display:block}
+a{color:var(--teal);text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:2px}
+[hidden]{display:none !important}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important}
+}
 
-    /* Social Icons */
-    .social-links a {
-      color: #555;
-      font-size: 1.6rem;
-      margin-right: 1rem;
-      transition: color 0.3s ease;
-    }
-    .social-links a:hover {
-      color: #007bff;
-    }
+.wrap{width:min(var(--wrap),100% - 2.5rem);margin-inline:auto}
+.skip{position:absolute;left:-999px;top:0;background:var(--teal);color:var(--on-teal);padding:.6rem 1rem;z-index:50;font-family:var(--head);font-weight:600}
+.skip:focus{left:1rem;top:1rem}
 
-    /* Experience list */
-    ul.job-list {
-      padding-left: 1rem;
-    }
-    ul.job-list li {
-      margin-bottom: 0.5rem;
-    }
+h1,h2,h3{font-family:var(--head);color:var(--ink);margin:0;font-weight:700;letter-spacing:-.015em;line-height:1.15}
+h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.05;letter-spacing:-.025em;font-weight:800}
+h2{font-size:clamp(1.6rem,3vw,2.1rem)}
+h3{font-size:1.1rem}
+p{margin:0 0 1rem}
 
-    /* Buttons */
-    .btn-primary {
-      background-color: #007bff;
-      border: none;
-    }
-    .btn-primary:hover {
-      background-color: #0056b3;
-    }
+/* Header */
+.site-header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+@supports (background:color-mix(in srgb,red,blue)){
+  .site-header{background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px)}
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:1rem}
+.brand{font-family:var(--head);font-weight:800;font-size:1.2rem;color:var(--ink);text-decoration:none;letter-spacing:-.02em}
+.site-nav ul{display:flex;gap:1.5rem;list-style:none;margin:0;padding:0}
+.site-nav a{font-family:var(--head);font-weight:600;font-size:.95rem;color:var(--muted);text-decoration:none;padding:.4rem 0;border-bottom:2px solid transparent}
+.site-nav a:hover{color:var(--ink);border-bottom-color:var(--teal)}
+.nav-toggle{display:none;font-family:var(--head);font-weight:600;background:transparent;color:var(--ink);border:1.5px solid var(--line);border-radius:6px;padding:.45rem .8rem;cursor:pointer}
+@media (max-width:860px){
+  .nav-toggle{display:inline-flex}
+  .js .site-nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);padding:.5rem 1.25rem 1rem}
+  .js .site-nav.open{display:block}
+  .site-nav ul{flex-direction:column;gap:.25rem}
+  .site-nav a{display:block;padding:.6rem 0}
+}
 
-    /* Footer */
-    footer {
-      background-color: #222;
-      color: #aaa;
-      padding: 20px 0;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-  </style>
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--head);font-weight:600;font-size:.98rem;padding:.7rem 1.2rem;border-radius:8px;border:1.5px solid var(--teal);text-decoration:none;transition:background-color .15s,filter .15s}
+.btn-primary{background:var(--teal);color:var(--on-teal)}
+.btn-primary:hover{filter:brightness(1.12)}
+.btn-ghost{background:transparent;color:var(--teal)}
+.btn-ghost:hover{background:var(--teal-bg)}
+.btn-small{padding:.45rem .85rem;font-size:.9rem}
+
+/* Hero: dark band with chart-paper grid, echoing the studio portrait backdrop */
+.hero{
+  background-color:var(--hero);
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:44px 44px;
+  color:var(--on-hero);
+  padding:clamp(2.5rem,6vw,4.5rem) 0 clamp(6rem,10vw,8rem);
+}
+.hero :focus-visible,.band :focus-visible{outline-color:var(--hero-accent)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.role{font-family:var(--head);font-weight:600;color:var(--hero-accent);margin:0 0 1rem}
+.hero h1{color:#fff;max-width:17ch}
+.summary{max-width:56ch;margin:1.4rem 0 0;font-size:1.12rem;color:var(--on-hero)}
+.tagline{margin:1rem 0 0;color:var(--on-hero-muted);font-style:italic}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.8rem}
+.hero .btn-primary,.band .btn-primary{background:var(--hero-accent);border-color:var(--hero-accent);color:#062A2A}
+.hero .btn-ghost,.band .btn-ghost{color:#fff;border-color:rgba(255,255,255,.55)}
+.hero .btn-ghost:hover,.band .btn-ghost:hover{background:rgba(255,255,255,.12)}
+.hero-links{display:flex;gap:1.25rem;margin-top:1.2rem;font-family:var(--head);font-weight:600}
+.hero-links a,.band a:not(.btn){color:var(--hero-accent)}
+.portrait{width:100%;max-width:340px;margin-inline:auto;aspect-ratio:2/3;object-fit:cover;object-position:50% 10%;border-radius:14px;border:1px solid rgba(255,255,255,.25);box-shadow:0 24px 48px rgba(0,0,0,.35);background:var(--hero)}
+@media (max-width:820px){
+  .hero-grid{grid-template-columns:1fr}
+  .portrait{max-width:230px;margin-inline:0}
+}
+
+/* Result tiles overlap the hero */
+.stats{position:relative;z-index:2;margin-top:-3.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;list-style:none;padding:0}
+.stats li{display:flex;flex-direction:column;gap:.4rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:1.2rem 1.2rem 1.1rem}
+.fig{font-family:var(--head);font-weight:800;font-size:2.4rem;line-height:1;letter-spacing:-.02em;color:var(--teal)}
+.what{font-size:.94rem;line-height:1.45}
+.where{margin-top:auto;padding-top:.3rem;font-family:var(--head);font-weight:600;font-size:.85rem;color:var(--muted)}
+
+/* Sections */
+.section{padding:clamp(2.5rem,5vw,4rem) 0 0}
+.section-head{max-width:62ch;margin-bottom:1.6rem}
+.section-head p{color:var(--muted);margin:.5rem 0 0}
+
+/* Two disciplines */
+.pillars{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
+.pillar{background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--c);border-radius:12px;box-shadow:var(--shadow-sm);padding:1.5rem}
+.pillar-lead{--c:var(--teal);--cbg:var(--teal-bg)}
+.pillar-ds{--c:var(--plum);--cbg:var(--plum-bg)}
+.pillar h3{color:var(--c);font-size:1.3rem;margin-bottom:.8rem}
+.pillar ul{margin:0 0 1.2rem;padding-left:1.1rem}
+.pillar li{margin-bottom:.5rem}
+.pillar .chips{padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;margin:0}
+.chips li{margin:0;font-family:var(--head);font-weight:600;font-size:.85rem;color:var(--c);background:var(--cbg);padding:.2rem .65rem;border-radius:999px}
+@media (max-width:820px){.pillars{grid-template-columns:1fr}}
+
+/* Experience: logo tabs + one detail panel */
+.tabs{display:none;grid-template-columns:repeat(5,minmax(0,1fr));gap:.75rem}
+.js .tabs{display:grid}
+.tab{display:flex;flex-direction:column;align-items:flex-start;gap:.5rem;padding:.8rem;text-align:left;font:inherit;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:12px;box-shadow:var(--shadow-sm);cursor:pointer;transition:border-color .15s,background-color .15s}
+.tab:hover{border-color:var(--teal)}
+.tab[aria-selected="true"]{border-color:var(--teal);background:var(--teal-bg)}
+.tab-logo{width:100%;height:44px;padding:5px 8px;background:#fff;border:1px solid var(--line);border-radius:8px}
+.tab-logo img{width:100%;height:100%;object-fit:contain}
+.tab-name{font-family:var(--head);font-weight:700;font-size:.98rem;line-height:1.2}
+.tab-years{font-size:.85rem;color:var(--muted);margin-top:-.3rem}
+.panel{margin-top:1rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:1.5rem 1.7rem}
+.panel + .panel{margin-top:1rem}
+.panel-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.2rem 1.5rem}
+.panel-co{margin:.15rem 0 0;color:var(--muted)}
+.dates{font-family:var(--head);font-weight:600;color:var(--teal);font-size:.95rem;white-space:nowrap}
+.panel ul{margin:.9rem 0 0;padding-left:1.1rem;max-width:78ch}
+.panel li{margin-bottom:.4rem}
+.panel-note{margin:.8rem 0 0}
+@media (max-width:860px){
+  .tabs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:150px;overflow-x:auto;padding-bottom:.5rem}
+}
+
+/* Projects */
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.filter{font-family:var(--head);font-weight:600;font-size:.92rem;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:999px;padding:.4rem .95rem;cursor:pointer;transition:background-color .15s,border-color .15s}
+.filter:hover{border-color:var(--teal)}
+.filter[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:var(--on-teal)}
+.projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--bg);border-bottom:1px solid var(--line)}
+.card-body{display:flex;flex-direction:column;gap:.55rem;padding:1rem 1.15rem 1.2rem;flex:1}
+.card-body p{margin:0;font-size:.95rem;line-height:1.5}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem;list-style:none;margin:.1rem 0 .3rem;padding:0}
+.tags li{font-family:var(--head);font-weight:600;font-size:.78rem;color:var(--plum);background:var(--plum-bg);padding:.12rem .55rem;border-radius:999px}
+.card .btn{align-self:flex-start;margin-top:auto}
+@media (max-width:980px){.projects{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.projects{grid-template-columns:1fr}}
+
+/* Education */
+.edu-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
+.edu{display:grid;grid-template-columns:104px minmax(0,1fr);gap:1.1rem;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow-sm);padding:1.2rem}
+.logo{width:104px;height:64px;padding:8px;background:#fff;border:1px solid var(--line);border-radius:8px}
+.logo a{display:block;height:100%}
+.logo img{width:100%;height:100%;object-fit:contain}
+.edu h3{margin-bottom:.2rem}
+.edu p{margin:0;font-size:.95rem;line-height:1.45}
+.edu .school{color:var(--muted);font-family:var(--head);font-weight:600}
+@media (max-width:820px){.edu-row{grid-template-columns:1fr}}
+@media (max-width:480px){.edu{grid-template-columns:1fr}}
+
+/* Contact band */
+.band{margin-top:clamp(2.5rem,5vw,4rem);background-color:var(--hero);background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:44px 44px;color:var(--on-hero);padding:clamp(2.5rem,5vw,3.5rem) 0}
+.band h2{color:#fff}
+.band p{max-width:56ch;margin:.7rem 0 0}
+.site-footer{background:var(--hero);border-top:1px solid rgba(255,255,255,.12);padding:1.2rem 0;color:var(--on-hero-muted);font-size:.92rem}
+</style>
 </head>
-<body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg">
-  <div class="container">
-    <a class="navbar-brand" href="#home">Cindy Chen</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#timeline">Career Growth Timeline</a></li>
-        <li class="nav-item"><a class="nav-link" href="#clients-section">Client & Professional Experience</a></li>
-        <li class="nav-item"><a class="nav-link" href="#journey">My Journey</a></li>
-        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Get in Touch</a></li>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">Cindy Chen</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </div>
+    </nav>
   </div>
-</nav>
+</header>
 
+<main id="main">
 
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Cindy Chen | Data Analyst</title>
-  <meta property="og:title" content="Cindy Chen | Data Analyst" />
-  <meta property="og:description" content="Explore my data analytics and data science portfolio showcasing projects and insights." />
-  <meta property="og:image" content="https://dchen-win.github.io/images/Prof.JPG" />
-  <meta property="og:url" content="https://dchen-win.github.io/" />
-  <meta property="og:type" content="website" />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-    }
-
-    /* Full home section */
-    #home {
-      position: relative;
-      width: 100%;
-      padding: 60px 20px;
-      overflow: hidden;
-    }
-
-    /* Background image layer */
-    #home::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url('images/future-logo.png') no-repeat center center;
-      background-size: cover;
-      opacity: 0.5;
-      z-index: 1;
-    }
-
-    /* Foreground content wrapper */
-    .home-content {
-      position: relative;
-      background-color: rgba(255, 255, 255, 0.95);
-      padding: 40px 30px;
-      border-radius: 12px;
-      max-width: 900px;
-      margin: 0 auto;
-      z-index: 2;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .intro-flex {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-    }
-
-    .intro-flex img {
-      width: 240px;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .intro-text {
-      flex: 1 1 300px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #111;
-      margin-bottom: 12px;
-    }
-
-    .title-highlight {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #0072CE;
-      margin-bottom: 6px;
-    }
-
-    .quote {
-      font-style: italic;
-      color: #555;
-      font-size: 1.1rem;
-      margin-bottom: 24px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #444;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin: 30px 0 12px;
-      color: #222;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0 0 30px;
-    }
-
-    ul li {
-      margin-bottom: 8px;
-      padding-left: 20px;
-      position: relative;
-    }
-
-    ul {
-      list-style: disc;
-      padding-left: 20px;
-      margin: 0 0 30px;
-    }
-
-    ul li {
-      margin-bottom: 8px;
-      position: relative;
-    }
-
-
-    .social-links {
-      text-align: center;
-      padding-top: 10px;
-    }
-
-    .social-links a {
-      margin: 0 12px;
-      font-size: 28px;
-      color: #0072CE;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .social-links a:hover {
-      color: #005999;
-    }
-  </style>
-</head>
-<body>
-
-  <section id="home">
-    <div class="home-content">
-      <div class="intro-flex">
-        <img src="images/Prof.JPG" alt="Cindy Chen" />
-        <div class="intro-text">
-          <h1>Hello, I'm Cindy Chen</h1>
-          <p class="title-highlight">Senior BI Analyst | Analytics Manager | Problem Solver | Aspiring Data Scientist</p>
-          <p class="quote">"Turning data complexity into simple stories that drive impact."</p>
-          <p>I help organizations unlock the power of their data to drive smarter decisions and meaningful business growth. With 8+ years of experience at Nike, Daimler, and Adidas, I transform complex data into clear, actionable insights that move the needle.</p>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="role">Cindy Chen, Senior Data Analytics Manager at Nike</p>
+        <h1>Analytics leadership, backed by hands-on data science.</h1>
+        <p class="summary">I lead analytics work across retail, supply chain and software, and I build the forecasts, models and pipelines behind it. Eight-plus years at Nike, Adidas, Jama Software and Daimler Truck, plus an M.S. in Data Analytics from Oregon State University.</p>
+        <p class="tagline">Turning data complexity into simple stories that drive impact.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#projects">View projects</a>
+          <!-- If you rename the PDF (recommended: Cindy-Chen-Resume.pdf), update this link. -->
+          <a class="btn btn-ghost" href="Resume%20Cindy%20Chen.pdf">Download resume</a>
+        </div>
+        <div class="hero-links">
+          <a href="https://www.linkedin.com/in/chendi20" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/dchen-win" rel="noopener">GitHub</a>
         </div>
       </div>
+      <img class="portrait" src="images/Prof.JPG" alt="Portrait of Cindy Chen" decoding="async">
+    </div>
+  </section>
 
-      <h2>What I Do</h2>
-      <p>As a seasoned analytics leader, I specialize in:</p>
-      <ul>
-        <li>Building scalable data pipelines and dashboards using <strong>SQL, Python, and R</strong></li>
-        <li>Crafting impactful data visualizations with <strong>Tableau and Power BI</strong></li>
-        <li>Applying advanced statistical modeling and predictive analytics</li>
-        <li>Leveraging cloud platforms like <strong>Azure, Snowflake</strong> for data solutions</li>
-      </ul>
+  <!-- RESULTS -->
+  <div class="wrap" id="results">
+    <ul class="stats" aria-label="Results from my work">
+      <li><span class="fig">$10M</span><span class="what">Split-shipping costs reduced through SQL-based root-cause analysis</span><span class="where">Adidas</span></li>
+      <li><span class="fig">20%</span><span class="what">Better transportation performance from carrier KPI analysis in Tableau</span><span class="where">Adidas</span></li>
+      <li><span class="fig">10%</span><span class="what">Revenue growth after launch, from a price elasticity analysis I led</span><span class="where">Adidas</span></li>
+      <li><span class="fig">300+</span><span class="what">Business users supported with data-quality troubleshooting and SQL</span><span class="where">Nike</span></li>
+      <li><span class="fig">30%</span><span class="what">Scrum team efficiency gain from Jira analytics built in Tableau</span><span class="where">Jama Software</span></li>
+    </ul>
+  </div>
 
-      <p>I’m passionate about clear communication and turning data complexity into simple, powerful stories that inspire action.</p>
-
-      <div class="social-links">
-          <a href="https://www.linkedin.com/in/chendi20" target="_blank" aria-label="LinkedIn">
-            <i class="bi bi-linkedin"></i>
-          </a>
-          <a href="https://github.com/dchen-win" target="_blank" aria-label="GitHub">
-            <i class="bi bi-github"></i>
-          </a> 
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Where analytics leadership meets data science</h2>
+      </div>
+      <div class="pillars">
+        <article class="pillar pillar-lead">
+          <h3>Analytics leadership</h3>
+          <ul>
+            <li>Aligned technical data design with stakeholder goals on Nike’s global promo project.</li>
+            <li>Took the SEC Bookings pipeline from testing to production.</li>
+            <li>Defined KPIs for retail-partner growth and Nike’s wholesale strategy.</li>
+          </ul>
+          <ul class="chips" aria-label="Leadership tools">
+            <li>SQL</li><li>Tableau</li><li>Power BI</li><li>Snowflake</li><li>Azure</li><li>Alteryx</li>
+          </ul>
+        </article>
+        <article class="pillar pillar-ds">
+          <h3>Data science</h3>
+          <ul>
+            <li>Forecasting with ARIMA, time-series decomposition and Monte Carlo simulation.</li>
+            <li>Classification with XGBoost, logistic regression, SVM and k-NN.</li>
+            <li>Deep learning (ResNet50 on TPU) and cloud ETL with Spark and BigQuery.</li>
+          </ul>
+          <ul class="chips" aria-label="Data science tools">
+            <li>Python</li><li>R</li><li>scikit-learn</li><li>TensorFlow</li><li>XGBoost</li><li>Spark</li><li>BigQuery</li><li>ggplot2</li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
 
-
-
-<!-- Timeline Section -->
-<section id="timeline" style="padding: 60px 20px; position: relative; overflow: hidden;">
-
-  <!-- Background image with 50% opacity -->
-  <div style="
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: url('images/career-progression-logo.png') no-repeat center center;
-    background-size: cover;
-    opacity: 0.5;
-    z-index: 1;
-  "></div>
-
-  <!-- Content Container with white translucent background -->
-  <div style="
-    position: relative;
-    z-index: 2;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 12px;
-    padding: 40px 30px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  ">
-    <h2 class="text-center mb-5" style="font-size: 36px; font-weight: 700; color: #222;">Career Growth Timeline</h2>
-
-    <div class="timeline">
-      <!-- Example step blocks -->
-      <div class="step">
-        <img src="images/ascm-logo.png" alt="ASCM Logo" />
-        <h4>Senior Consultant</h4>
-        <div class="industry">Supply Chain</div>
-        <div class="duration">
-          <span class="range">2017 - 2018</span>
-          <span class="length">1 year</span>
-        </div>
-        <div class="desc">Provided data-driven consulting for supply chain optimization.</div>
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Experience</h2>
       </div>
 
-      <div class="step">
-        <img src="images/daimler-logo.png" alt="Daimler Truck Logo" />
-        <h4>Data Analyst</h4>
-        <div class="industry">Automotive</div>
-        <div class="duration">
-          <span class="range">2019 - 2020</span>
-          <span class="length">1 years</span>
-        </div>
-        <div class="desc">Led analytics projects for fleet efficiency and emissions.</div>
+      <div class="tabs" role="tablist" aria-label="Employers">
+        <button class="tab" role="tab" id="tab-nike" aria-controls="panel-nike" aria-selected="true">
+          <span class="tab-logo"><img src="images/nike-logo.png" alt=""></span>
+          <span class="tab-name">Nike</span><span class="tab-years">2022 – Present</span>
+        </button>
+        <button class="tab" role="tab" id="tab-adidas" aria-controls="panel-adidas" aria-selected="false" tabindex="-1">
+          <span class="tab-logo"><img src="images/adidas-logo.png" alt=""></span>
+          <span class="tab-name">Adidas</span><span class="tab-years">2021 – 2022</span>
+        </button>
+        <button class="tab" role="tab" id="tab-jama" aria-controls="panel-jama" aria-selected="false" tabindex="-1">
+          <span class="tab-logo"><img src="images/jama-logo.png" alt=""></span>
+          <span class="tab-name">Jama Software</span><span class="tab-years">2020 – 2021</span>
+        </button>
+        <button class="tab" role="tab" id="tab-daimler" aria-controls="panel-daimler" aria-selected="false" tabindex="-1">
+          <span class="tab-logo"><img src="images/daimler-logo.png" alt=""></span>
+          <span class="tab-name">Daimler Truck</span><span class="tab-years">2019 – 2020</span>
+        </button>
+        <button class="tab" role="tab" id="tab-ascm" aria-controls="panel-ascm" aria-selected="false" tabindex="-1">
+          <span class="tab-logo"><img src="images/ascm-logo.png" alt=""></span>
+          <span class="tab-name">ASCM</span><span class="tab-years">2017 – 2018</span>
+        </button>
       </div>
 
-      <div class="step">
-        <img src="images/jama-logo.png" alt="Jama Software Logo" />
-        <h4>BI Analyst</h4>
-        <div class="industry">Software</div>
-        <div class="duration">
-          <span class="range">2020 - 2021</span>
-          <span class="length">1.5 year</span>
+      <div class="panel" role="tabpanel" id="panel-nike" aria-labelledby="tab-nike">
+        <div class="panel-head">
+          <div><h3>Senior Data Analytics Manager</h3><p class="panel-co">Nike, Beaverton, OR</p></div>
+          <span class="dates">Oct 2022 – Present</span>
         </div>
-        <div class="desc">Built predictive models to improve product quality metrics.</div>
+        <!-- TODO (high impact): add team size and one or two measurable outcomes, e.g. "Manage a team of N analysts" or "Reduced dashboard refresh time by X%". -->
+        <ul>
+          <li>Led collaboration on Nike’s global promo project, aligning technical data design with stakeholder goals.</li>
+          <li>Enhanced data integrity by leading development of the SEC Bookings pipeline from testing to production.</li>
+          <li>Troubleshot data quality issues for 300+ business users, improving productivity through advanced SQL support.</li>
+          <li>Developed KPIs to drive growth with retail partners and support Nike’s wholesale strategy.</li>
+          <li>Remediated legacy dashboards to streamline Nike store analytics and improve operational efficiency.</li>
+        </ul>
       </div>
 
-      <div class="step">
-        <img src="images/adidas-logo.png" alt="Adidas Logo" />
-        <h4>Senior Data Analyst</h4>
-        <div class="industry">Retail & Sportswear</div>
-        <div class="duration">
-          <span class="range">2021 - 2023</span>
-          <span class="length">1.5 years</span>
+      <div class="panel" role="tabpanel" id="panel-adidas" aria-labelledby="tab-adidas">
+        <div class="panel-head">
+          <div><h3>Senior Data Analyst</h3><p class="panel-co">Adidas, Portland, OR</p></div>
+          <span class="dates">Jun 2021 – Sep 2022</span>
         </div>
-        <div class="desc">Managed analytics team delivering sales and marketing insights.</div>
+        <ul>
+          <li>Reduced $10M in split shipping costs through SQL-based root-cause analysis.</li>
+          <li>Improved transportation performance by 20% by analyzing carrier KPIs in Tableau.</li>
+          <li>Led a price elasticity analysis, driving 10% revenue growth post-launch.</li>
+          <li>Streamlined distribution center operations and reduced manual work with Tableau dashboards and SQL automation.</li>
+          <li>Supported the Alteryx workflow redesign for demand planning in North America and Europe.</li>
+        </ul>
       </div>
 
-      <div class="step">
-        <img src="images/nike-logo.png" alt="Nike Logo" />
-        <h4>Senior Data Analytics Manager</h4>
-        <div class="industry">Retail & Sportswear</div>
-        <div class="duration">
-          <span class="range">2023 - Present</span>
-          <span class="length">Current</span>
+      <div class="panel" role="tabpanel" id="panel-jama" aria-labelledby="tab-jama">
+        <div class="panel-head">
+          <div><h3>BI Analyst</h3><p class="panel-co">Jama Software, Portland, OR</p></div>
+          <span class="dates">Mar 2020 – May 2021</span>
         </div>
-        <div class="desc">Driving data analytics strategy for global product launches.</div>
+        <!-- TODO: the 40% net income claim will draw questions. Name the metric and how it was measured (for example pipeline, conversion or revenue), or reword it. -->
+        <ul>
+          <li>Improved Scrum team efficiency by 30% using Jira analytics in Tableau.</li>
+          <li>Boosted net income by 40% by delivering analytical insights to Sales and Marketing teams.</li>
+          <li>Automated data extraction with Python using the Jira and Git APIs.</li>
+          <li>Developed forecasting models to help project managers track delivery timelines.</li>
+        </ul>
+      </div>
+
+      <div class="panel" role="tabpanel" id="panel-daimler" aria-labelledby="tab-daimler">
+        <div class="panel-head">
+          <div><h3>Data Analyst</h3><p class="panel-co">Daimler Truck North America, Portland, OR</p></div>
+          <span class="dates">Jan 2019 – Feb 2020</span>
+        </div>
+        <ul>
+          <li>Analyzed telematics and component data for machine learning model development.</li>
+          <li>Built live Power BI and Tableau dashboards using SQL-based data normalization models.</li>
+          <li>Troubleshot dashboard performance and ensured the accuracy of service-level data.</li>
+        </ul>
+      </div>
+
+      <div class="panel" role="tabpanel" id="panel-ascm" aria-labelledby="tab-ascm">
+        <div class="panel-head">
+          <div><h3>Senior Consultant, Supply Chain</h3><p class="panel-co">ASCM</p></div>
+          <span class="dates">2017 – 2018</span>
+        </div>
+        <p class="panel-note">Provided data-driven consulting for supply chain optimization.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Data science projects</h2>
+        <p>Forecasting, machine learning, statistics and data engineering, each with code on GitHub.</p>
+      </div>
 
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-  }
+      <div class="filters" role="group" aria-label="Filter projects by type">
+        <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="ml" aria-pressed="false">Machine learning</button>
+        <button class="filter" type="button" data-filter="stats" aria-pressed="false">Statistics &amp; forecasting</button>
+        <button class="filter" type="button" data-filter="eng" aria-pressed="false">Data engineering</button>
+        <button class="filter" type="button" data-filter="viz" aria-pressed="false">Visualization</button>
+      </div>
 
-  .timeline {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+      <!-- TODO: add a one-line result to each card (accuracy, top predictors, what the forecast showed). -->
+      <div class="projects">
 
-  .timeline::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(to right top, #888, #000);
-    z-index: 1;
-  }
+        <article class="card" data-cat="stats">
+          <img class="card-img" src="images/sports.png" alt="" loading="lazy">
+          <div class="card-body">
+            <h3>Nike revenue forecasting (Kaggle)</h3>
+            <p>Forecast quarterly revenue from seasonal trends and economic indicators, with Monte Carlo simulation for uncertainty.</p>
+            <ul class="tags"><li>R</li><li>ARIMA</li><li>Monte Carlo</li></ul>
+            <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/Optimizing-Nike-Revenues-Forecasting" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
 
-  .step {
-    background-color: white;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    width: 180px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    z-index: 2;
-    position: relative;
-    min-height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+        <article class="card" data-cat="ml">
+          <img class="card-img" src="images/vehicle-loan.png" alt="" loading="lazy">
+          <div class="card-body">
+            <h3>Vehicle loan default prediction</h3>
+            <p>Found the key predictors of loan default and built XGBoost and logistic regression classifiers.</p>
+            <ul class="tags"><li>R</li><li>XGBoost</li><li>caret</li></ul>
+            <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/R-Group-Project" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
 
-  .step img {
-    width: 80px;
-    height: auto;
-    margin: 0 auto 10px auto;
-  }
+        <article class="card" data-cat="eng viz">
+          <img class="card-img" src="images/customer.png" alt="" loading="lazy">
+          <div class="card-body">
+            <h3>Stack Exchange user engagement</h3>
+            <p>Cloud ETL pipeline and Power BI dashboards on user behavior and engagement trends.</p>
+            <ul class="tags"><li>Python</li><li>Spark</li><li>BigQuery</li><li>Power BI</li></ul>
+            <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/stack-exchange-user-engagement-analysis" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
 
-  .step h4 {
-    margin: 10px 0 5px 0;
-    font-size: 16px;
-    font-weight: bold;
-  }
+        <article class="card" data-cat="ml">
+          <img class="card-img" src="images/flower.png" alt="" loading="lazy">
+          <div class="card-body">
+            <h3>Petals to the Metal: flower classification</h3>
+            <p>A CNN that classifies 104 flower species with ResNet50, trained on CPU and TPU.</p>
+            <ul class="tags"><li>TensorFlow</li><li>Keras</li><li>ResNet50</li></ul>
+            <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/petal_to_metals" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
 
-  .step .company {
-    font-weight: bold;
-  }
+        <article class="card" data-cat="stats">
+          <img class="card-img" src="images/education.png" alt="" loading="lazy">
+          <div class="card-body">
+            <h3>Logistic regression on U.S. Census data</h3>
+            <p>How education affects income, using logistic regression and PCA on 1994 Census data.</p>
+            <ul class="tags"><li>R</li><li>PCA</li><li>AUC</li></ul>
+            <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/logistic-regression-census-education-income" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
 
-  .step .industry {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 10px;
-  }
+        <article class="card" data-cat="stats">
+          <img class="card-img" src="images/house.png" alt="" loading="lazy">
+          <div class="card-body">
+            <h3>Electricity cost analysis in Oregon</h3>
+            <p>Linear regression and GLMs comparing electricity costs across housing types.</p>
+            <ul class="tags"><li>R</li><li>GLM</li><li>ggplot2</li></ul>
+            <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/electricity-cost-analysis" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
 
-  .step .duration {
-    font-size: 13px;
-    color: #333;
-    margin-bottom: 4px;
-    line-height: 1.2;
-  }
+        <article class="card" data-cat="viz">
+          <img class="card-img" src="images/chocolate.png" alt="" loading="lazy">
+          <div class="card-body">
+            <h3>Chocolate sales exploratory analysis</h3>
+            <p>Sales trends across regions and products, with direct labeling and colorblind-friendly charts.</p>
+            <ul class="tags"><li>R</li><li>tidyverse</li><li>ggplot2</li></ul>
+            <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/Data-visualization-R" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
 
-  .step .duration .range {
-    display: block;
-  }
+        <article class="card" data-cat="ml">
+          <img class="card-img" src="images/ml.png" alt="" loading="lazy">
+          <div class="card-body">
+            <h3>Machine learning fundamentals</h3>
+            <p>Classification and regression with k-NN, SVM and logistic regression, plus text classification.</p>
+            <ul class="tags"><li>Python</li><li>scikit-learn</li><li>pandas</li></ul>
+            <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/ML-Foundamentals-OSU" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
 
-  .step .duration .length {
-    display: block;
-    font-style: italic;
-  }
+        <article class="card" data-cat="ml">
+          <img class="card-img" src="images/ai.jpg" alt="" loading="lazy">
+          <div class="card-body">
+            <h3>Artificial intelligence projects</h3>
+            <p>A* search, constraint solvers and logical inference engines in Python.</p>
+            <ul class="tags"><li>Python</li><li>A*</li><li>CSP</li></ul>
+            <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/AI-Fundamentals-OSU" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
 
-  .step .desc {
-    font-size: 13px;
-    color: #444;
-  }
-
-  .arrow {
-    text-align: center;
-    font-size: 24px;
-    margin-top: 10px;
-  }
-
-  .text-center {
-    text-align: center;
-  }
-
-  .mb-5 {
-    margin-bottom: 40px;
-  }
-</style>
-
-<!-- ########## Experience/Clients Section ###########################-->
-<section id="clients-section" style="position: relative; padding: 60px 20px; background-color: #f9f9f9; overflow: hidden;">
-  <!-- Background Image -->
-  <div style="
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-image: url('images/office-logo.png');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5;
-    z-index: 1;
-  "></div>
-
-  <!-- Foreground Content -->
-  <div class="container" style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
-    <div class="row">
-      <div class="col-12 mb-5 position-relative text-center">
-        <h2 style="font-size: 36px; font-weight: 700; color: #222;">Clients & Professional Experience</h2>
       </div>
     </div>
+  </section>
 
-    <!-- Row 1: Nike & Adidas -->
-    <div class="row mb-4">
-      <!-- Nike -->
-      <div class="col-md-6 mb-4">
-        <div style="background: #fff; border-radius: 12px; padding: 30px; height: 100%; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-          <a href="https://www.nike.com" target="_blank">
-            <img class="img-fluid mb-3" src="images/nike-logo.png" width="160" height="100" alt="Nike Logo">
-          </a>
-          <h3>Senior Data Analytics Manager</h3>
-          <p>Nike, Beaverton, OR</p>
-          <p><em>Oct 2022 – Present</em></p>
-          <ul>
-            <li>Led collaboration on Nike's global promo project, aligning technical data design with stakeholder goals.</li>
-            <li>Remediated legacy dashboards to streamline Nike store analytics and improve operational efficiency.</li>
-            <li>Enhanced data integrity by leading development of SEC Bookings pipeline from testing to production.</li>
-            <li>Troubleshot data quality issues for 300+ business users, improving productivity via advanced SQL support.</li>
-            <li>Developed KPIs to drive growth with retail partners and support Nike's wholesale strategy.</li>
-          </ul>
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <div class="wrap">
+      <div class="section-head"><h2>Education</h2></div>
+      <div class="edu-row">
+        <div class="edu">
+          <div class="logo"><a href="https://ecampus.oregonstate.edu/online-degrees/graduate/data-analytics/" rel="noopener" aria-label="Oregon State University data analytics program"><img src="images/osu-logo.png" alt="Oregon State University logo" loading="lazy"></a></div>
+          <div>
+            <h3>M.S. in Data Analytics</h3>
+            <!-- Confirm the exact degree title on your diploma or transcript. -->
+            <p class="school">Oregon State University, 2022 – 2025</p>
+            <p>Applied statistics, machine learning and data visualization.</p>
+          </div>
         </div>
-      </div>
-
-      <!-- Adidas -->
-      <div class="col-md-6 mb-4">
-        <div style="background: #fff; border-radius: 12px; padding: 30px; height: 100%; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-          <a href="https://www.adidas.com" target="_blank">
-            <img class="img-fluid mb-3" src="images/adidas-logo.png" width="160" height="100" alt="Adidas Logo">
-          </a>
-          <h3>Senior Data Analyst</h3>
-          <p>Adidas, Portland, OR</p>
-          <p><em>Jun 2021 – Sep 2022</em></p>
-          <ul>
-            <li>Reduced $10M in split shipping costs through SQL-based root cause analysis.</li>
-            <li>Improved transportation performance by 20% by analyzing carrier KPIs in Tableau.</li>
-            <li>Streamlined DC operations and reduced manual work with Tableau dashboards and SQL automation.</li>
-            <li>Supported Alteryx workflow redesign for demand planning in NAM & EU markets.</li>
-            <li>Led price elasticity analysis, driving 10% revenue growth post-launch.</li>
-          </ul>
+        <div class="edu">
+          <div class="logo"><a href="https://www.up.edu/graduate/program-requirements/msotm.html" rel="noopener" aria-label="University of Portland operations and technology management program"><img src="images/up-logo.png" alt="University of Portland logo" loading="lazy"></a></div>
+          <div>
+            <h3>M.S. in Operations and Technology Management</h3>
+            <p class="school">University of Portland, 2017 – 2019</p>
+            <p>Operations management, technology adoption and business analytics.</p>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Row 2: Jama & Daimler -->
-    <div class="row">
-      <!-- Jama -->
-      <div class="col-md-6 mb-4">
-        <div style="background: #fff; border-radius: 12px; padding: 30px; height: 100%; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-          <a href="https://www.jamasoftware.com/" target="_blank">
-            <img class="img-fluid mb-3" src="images/jama-logo.png" width="160" height="100" alt="Jama Logo">
-          </a>
-          <h3>BI Analyst</h3>
-          <p>Jama Software, Portland, OR</p>
-          <p><em>Mar 2020 – May 2021</em></p>
-          <ul>
-            <li>Improved Scrum team efficiency by 30% using Jira analytics in Tableau.</li>
-            <li>Boosted net income by 40% by delivering analytical insights to Sales & Marketing teams.</li>
-            <li>Automated data extraction using Python with Jira and Git APIs.</li>
-            <li>Developed forecasting models to help project managers track delivery timelines.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Daimler -->
-      <div class="col-md-6 mb-4">
-        <div style="background: #fff; border-radius: 12px; padding: 30px; height: 100%; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-          <a href="https://www.daimlertruck.com/" target="_blank">
-            <img class="img-fluid mb-3" src="images/daimler-logo.png" width="200" height="100" alt="Daimler Logo">
-          </a>
-          <h3>Data Analyst</h3>
-          <p>Daimler Truck North America, Portland, OR</p>
-          <p><em>Jan 2019 – Feb 2020</em></p>
-          <ul>
-            <li>Analyzed telematics and component data for machine learning model development.</li>
-            <li>Built live Power BI and Tableau dashboards using SQL-based data normalization models.</li>
-            <li>Troubleshot dashboard performance and ensured accuracy of service-level data.</li>
-          </ul>
-        </div>
+  <!-- CONTACT -->
+  <section class="band" id="contact">
+    <div class="wrap">
+      <h2>Get in touch</h2>
+      <p>Reach out about analytics leadership, data science, or collaboration. LinkedIn is the fastest way to reach me.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/chendi20" rel="noopener">Message me on LinkedIn</a>
+        <a class="btn btn-ghost" href="Resume%20Cindy%20Chen.pdf">Download resume</a>
+        <a class="btn btn-ghost" href="https://github.com/dchen-win" rel="noopener">See my GitHub</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+</main>
 
-<!-- My Journey Section -->
-<section id="journey" style="position: relative; padding: 60px 20px; overflow: hidden;">
+<footer class="site-footer">
+  <div class="wrap">© <span id="year">2026</span> Cindy Chen. All rights reserved.</div>
+</footer>
 
-  <!-- Background Image Layer -->
-  <div style="
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('images/journey-logo.png');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5;
-    z-index: 0;
-  "></div>
-
-  <!-- Content Container -->
-  <div class="container" style="position: relative; z-index: 1; max-width: 1000px; margin: 0 auto; background-color: rgba(255,255,255,0.95); padding: 40px; border-radius: 12px;">
-
-    <!-- Title -->
-    <h2 style="font-size: 36px; font-weight: 700; color: #222; text-align: center; margin-bottom: 8px;">
-      🌟 My Journey: From Jewelry Counter to Data-Driven Leadership
-    </h2>
-    <p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 40px; font-style: italic;">
-      Overcoming language barriers and technical challenges to lead global analytics teams and empower data-driven change.
-    </p>
-
-    <!-- Top Row: Jewelry Store Photo and Opening Story -->
-    <div style="display: flex; flex-wrap: wrap; align-items: flex-start; margin-bottom: 40px;">
-      <!-- Left: Image -->
-      <div style="flex: 1 1 40%; text-align: center;">
-        <img src="images/sales-pic.jpeg" alt="Cindy working as a sales associate in a jewelry store"
-             style="width: 100%; max-width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-      </div>
-      <!-- Right: Text -->
-      <div style="flex: 1 1 60%; padding-left: 30px;">
-        <p style="font-size: 16px; color: #444; line-height: 1.6;">
-          Ten years ago, I arrived in the U.S. with an advanced engineering degree, limited English, and a relentless drive to build a better life. As a first-generation college student with no family blueprint to follow, I started working as a sales associate in a jewelry store—saving every dollar and practicing English through daily customer interactions. Within six months, I passed all required entrance exams and proudly enrolled in my first self-funded Master’s degree in Operations & Technology Management.
-        </p>
-        <p style="font-size: 16px; color: #444; line-height: 1.6;">
-          With no prior experience in data analytics, I initially struggled to grasp the technical concepts. I dedicated myself to mastering the fundamentals—studying rigorously, working with real-world datasets, and building technical fluency. Navigating a new professional culture while developing skills and building a network from scratch was a major challenge. After countless hours of effort and perseverance, I earned an opportunity at Daimler Truck North America and completed my Master’s degree in just 15 months.
-        </p>
-      </div>
-    </div>
-
-    <!-- Middle Paragraphs -->
-    <div style="font-size: 16px; color: #444; line-height: 1.7; margin-bottom: 40px;">
-      <p>
-        My analytics career began at Daimler Truck North America, where I partnered with data scientists on machine learning projects involving telematics data and predictive diagnostics. I developed SQL-based normalization models and built live dashboards that enabled engineering teams to proactively respond to fleet issues. This was my first real taste of using data to drive operational transformation—and I was hooked.
-      </p>
-      <p>
-        At Jama Software, I brought that mindset into a high-growth tech environment, streamlining product team reporting using Python and REST APIs. I helped agile teams enhance sprint planning and operational forecasting by designing custom analytics pipelines that replaced manual tracking.
-      </p>
-      <p>
-        My most pivotal role came at Adidas, where I worked as a Senior Data Analyst embedded within the North American supply chain organization. This role gave me end-to-end exposure to logistics, transportation, demand planning, and pricing. I provided key insights that helped reduce shipping inefficiencies, supported pricing decisions that increased revenue, and built dashboards to track performance across multiple supply chain functions. My work empowered cross-functional teams to operate more efficiently and collaboratively, improving planning cadence and execution across regions. This was the moment I realized how impactful analytics can be when applied holistically across a business.
-      </p>
-    </div>
-
-    <!-- Bottom Row: Closing Story and Nike Photo -->
-    <div style="display: flex; flex-wrap: wrap; align-items: center;">
-      <!-- Left: Text -->
-      <div style="flex: 1 1 60%; padding-right: 30px;">
-        <p style="font-size: 16px; color: #444; line-height: 1.7;">
-          Currently, I serve as a Senior Data Analytics Manager at Nike, where I lead global reporting strategy and insight delivery across retail and wholesale functions. I collaborate with 300+ stakeholders, develop enterprise dashboards, and optimize SQL pipelines and KPI frameworks that guide decision-making across multiple lines of business.
-        </p>
-        <p style="font-size: 16px; color: #444; line-height: 1.7;">
-          While managing this fast-paced role, I also completed my second Master’s degree in Data Analytics at Oregon State University. Balancing graduate school with full-time leadership was demanding—but it proved that with grit, purpose, and discipline, anything is possible.
-        </p>
-        <p style="font-size: 16px; color: #444; line-height: 1.7;">
-          I am self-driven, highly collaborative, and grounded in technical excellence. I believe that no matter how difficult the environment, with the right mindset and perseverance, I can turn challenges into opportunities—and help others do the same.
-        </p>
-        <p style="font-size: 16px; color: #444; line-height: 1.7; font-weight: 600;">
-          My journey started with a language barrier and a dream. Today, I use data to lead change, empower teams, and deliver measurable impact—always looking forward to the next challenge.
-        </p>
-      </div>
-      <!-- Right: Nike Image -->
-      <div style="flex: 1 1 40%; text-align: center; margin-top: 20px;">
-        <img src="images/Nike-pic.jpeg" alt="Cindy leading data analytics team at Nike"
-             style="width: 100%; max-width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Portfolio</title>
-  <!-- Bootstrap CSS CDN for styling (optional) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <style>
-    /* Portfolio section with background image and overlay */
-    #portfolio {
-      position: relative;
-      background-image: url('images/portfolio.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-color: #add8e6; /* light blue fallback */
-      padding: 60px 0;
+<script>
+(function () {
+  // Mobile menu
+  var toggle = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('site-nav');
+  toggle.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
     }
+  });
 
-    /* 50% transparent white overlay */
-    #portfolio::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-color: rgba(255, 255, 255, 0.5);
-      pointer-events: none;
-      z-index: 1;
-    }
+  // Experience tabs (all panels stay visible if JavaScript is off)
+  var tabs = [].slice.call(document.querySelectorAll('[role="tab"]'));
+  function select(tab, focus) {
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (focus) tab.focus();
+  }
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function () { select(tab); });
+    tab.addEventListener('keydown', function (e) {
+      var next = null;
+      if (e.key === 'ArrowRight') next = tabs[(i + 1) % tabs.length];
+      else if (e.key === 'ArrowLeft') next = tabs[(i - 1 + tabs.length) % tabs.length];
+      else if (e.key === 'Home') next = tabs[0];
+      else if (e.key === 'End') next = tabs[tabs.length - 1];
+      if (next) { e.preventDefault(); select(next, true); }
+    });
+  });
+  if (tabs.length) select(tabs[0]);
 
-    /* Make sure container content is above overlay */
-    #portfolio > .container {
-      position: relative;
-      z-index: 2;
-    }
-
-    /* Optional: adjust card styles for better readability on background */
-    #portfolio .card {
-      background-color: rgba(255, 255, 255, 0.85);
-      border: none;
-    }
-
-    /* Center images inside cards */
-    .card-img-top {
-      width: 200px;
-      height: 200px;
-      object-fit: contain;
-      margin: 1.5rem auto 0;
-      display: block;
-    }
-
-    /* Card text styling */
-    #portfolio p, 
-    #portfolio ul {
-      font-size: 16px;
-      color: #444;
-      line-height: 1.6;
-    }
-
-    #portfolio ul {
-      padding-left: 20px;
-    }
-  </style>
-</head>
-<body>
-
-<!-- Portfolio Section -->
-<section id="portfolio" class="bg-light">
-  <div class="container">
-    <h2 style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 40px;">Portfolio</h2>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-
-      <!-- Electricity Cost Analysis -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="images/house.png" alt="House Icon" style="width:200px; height:200px; object-fit:contain;" class="card-img-top mx-auto d-block mt-3" />
-          <div class="card-body">
-            <h5 class="card-title">Electricity Cost Analysis in Oregon</h5>
-            <p style="font-size: 16px; color: #444; line-height: 1.6;">
-              Compared electricity costs across housing types in Oregon using regression models to identify key predictors and select the best model.
-            </p>
-            <ul style="font-size: 16px; color: #444; line-height: 1.6; padding-left: 20px;">
-              <li>R, data wrangling, EDA</li>
-              <li>Linear regression, GLM</li>
-              <li>Model evaluation metrics</li>
-              <li>Data visualization with ggplot2</li>
-            </ul>
-            <a href="https://github.com/dchen-win/electricity-cost-analysis" target="_blank" class="btn btn-primary btn-sm">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Stack Exchange Analysis -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="images/customer.png" alt="Customer Icon" style="width:200px; height:200px; object-fit:contain;" class="card-img-top mx-auto d-block mt-3" />
-          <div class="card-body">
-            <h5 class="card-title">Stack Exchange User Engagement Analysis</h5>
-            <p style="font-size: 16px; color: #444; line-height: 1.6;">
-              Developed a cloud-based ETL pipeline and dashboards to analyze user behavior and engagement trends on Stack Exchange.
-            </p>
-            <ul style="font-size: 16px; color: #444; line-height: 1.6; padding-left: 20px;">
-              <li>Python, Scala Spark, Google Cloud Platform</li>
-              <li>XML parsing and ETL pipeline</li>
-              <li>BigQuery, Power BI visualization</li>
-              <li>Trend analysis and storytelling</li>
-            </ul>
-            <a href="https://github.com/dchen-win/stack-exchange-user-engagement-analysis" target="_blank" class="btn btn-primary btn-sm">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Logistic Regression Census -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="images/education.png" alt="Education Icon" style="width:200px; height:200px; object-fit:contain;" class="card-img-top mx-auto d-block mt-3" />
-          <div class="card-body">
-            <h5 class="card-title">Logistic Regression on U.S. Census Data</h5>
-            <p style="font-size: 16px; color: #444; line-height: 1.6;">
-              Modeled how education affects income levels using logistic regression with demographic controls on 1994 Census data.
-            </p>
-            <ul style="font-size: 16px; color: #444; line-height: 1.6; padding-left: 20px;">
-              <li>R, ggplot2, dplyr</li>
-              <li>Logistic regression, PCA</li>
-              <li>Model evaluation (AUC, precision, recall)</li>
-              <li>Data visualization and EDA</li>
-            </ul>
-            <a href="https://github.com/dchen-win/logistic-regression-census-education-income" target="_blank" class="btn btn-primary btn-sm">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Chocolate Sales Visualization -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="images/chocolate.png" alt="Chocolate Icon" style="width:200px; height:200px; object-fit:contain;" class="card-img-top mx-auto d-block mt-3" />
-          <div class="card-body">
-            <h5 class="card-title">Chocolate Sales Exploratory Analysis</h5>
-            <p style="font-size: 16px; color: #444; line-height: 1.6;">
-              Visualized chocolate sales trends across regions and products using tidyverse and ggplot2 in R.
-            </p>
-            <ul style="font-size: 16px; color: #444; line-height: 1.6; padding-left: 20px;">
-              <li>R, ggplot2, tidyverse</li>
-              <li>Data cleaning & EDA</li>
-              <li>Direct labeling, colorblind-friendly design</li>
-              <li>Sales and revenue trend analysis</li>
-            </ul>
-            <a href="https://github.com/dchen-win/Data-visualization-R" target="_blank" class="btn btn-primary btn-sm">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Machine Learning Fundamentals -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="images/ml.png" alt="ML Icon" style="width:200px; height:200px; object-fit:contain;" class="card-img-top mx-auto d-block mt-3" />
-          <div class="card-body">
-            <h5 class="card-title">Machine Learning Fundamentals</h5>
-            <p style="font-size: 16px; color: #444; line-height: 1.6;">
-              Built and evaluated supervised learning models for classification and regression in Python using scikit-learn.
-            </p>
-            <ul style="font-size: 16px; color: #444; line-height: 1.6; padding-left: 20px;">
-              <li>Python, scikit-learn, pandas</li>
-              <li>k-NN, SVM, logistic regression</li>
-              <li>Text classification & model evaluation</li>
-              <li>Jupyter Notebooks, NumPy</li>
-            </ul>
-            <a href="https://github.com/dchen-win/ML-Foundamentals-OSU" target="_blank" class="btn btn-primary btn-sm">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Artificial Intelligence Projects -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="images/ai.jpg" alt="AI Icon" style="width:200px; height:200px; object-fit:contain;" class="card-img-top mx-auto d-block mt-3" />
-          <div class="card-body">
-            <h5 class="card-title">Artificial Intelligence Projects</h5>
-            <p style="font-size: 16px; color: #444; line-height: 1.6;">
-              Implemented classic AI algorithms such as A* search, CSP solvers, and logical inference engines in Python.
-            </p>
-            <ul style="font-size: 16px; color: #444; line-height: 1.6; padding-left: 20px;">
-              <li>Search strategies, game trees</li>
-              <li>Propositional and first-order logic</li>
-              <li>Constraint satisfaction & theorem proving</li>
-              <li>Python, problem solving</li>
-            </ul>
-            <a href="https://github.com/dchen-win/AI-Fundamentals-OSU" target="_blank" class="btn btn-primary btn-sm">View Project</a>
-          </div>
-        </div>
-      </div>
-      <!-- Vehicle Loan Default Prediction -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="images/vehicle-loan.png" alt="Vehicle Loan Icon" style="width:200px; height:200px; object-fit:contain;" class="card-img-top mx-auto d-block mt-3" />
-          <div class="card-body">
-            <h5 class="card-title">Vehicle Loan Default Prediction</h5>
-            <p style="font-size: 16px; color: #444; line-height: 1.6;">
-              Analyzed vehicle loan data to identify key predictors of loan default and built classification models using XGBoost and logistic regression.
-            </p>
-            <ul style="font-size: 16px; color: #444; line-height: 1.6; padding-left: 20px;">
-              <li>R (tidyverse, xgboost, caret, ggplot2)</li>
-              <li>Data cleaning and feature engineering</li>
-              <li>Machine learning classification</li>
-              <li>Model interpretation & visualization</li>
-            </ul>
-            <a href="https://github.com/dchen-win/R-Group-Project" target="_blank" class="btn btn-primary btn-sm">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Nike Revenue Forecasting -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="images/sports.png" alt="Nike Revenue Icon" style="width:200px; height:200px; object-fit:contain;" class="card-img-top mx-auto d-block mt-3" />
-          <div class="card-body">
-            <h5 class="card-title">Nike Revenue Forecasting (Kaggle)</h5>
-            <p style="font-size: 16px; color: #444; line-height: 1.6;">
-              Forecasted Nike’s quarterly revenues by analyzing seasonal trends and economic indicators using time series modeling and simulation.
-            </p>
-            <ul style="font-size: 16px; color: #444; line-height: 1.6; padding-left: 20px;">
-              <li>R (tidyverse, forecast, ggplot2)</li>
-              <li>Time series decomposition & ARIMA</li>
-              <li>Monte Carlo simulation</li>
-              <li>Economic data interpretation</li>
-            </ul>
-            <a href="https://github.com/dchen-win/Optimizing-Nike-Revenues-Forecasting" target="_blank" class="btn btn-primary btn-sm">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Flower Classification with Deep Learning -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="images/flower.png" alt="Flower Classification Icon" style="width:200px; height:200px; object-fit:contain;" class="card-img-top mx-auto d-block mt-3" />
-          <div class="card-body">
-            <h5 class="card-title">Petals to the Metal: Flower Classification</h5>
-            <p style="font-size: 16px; color: #444; line-height: 1.6;">
-              Built and deployed a CNN to classify 104 flower species using TensorFlow and ResNet50 across CPU and TPU environments.
-            </p>
-            <ul style="font-size: 16px; color: #444; line-height: 1.6; padding-left: 20px;">
-              <li>Python, TensorFlow, Keras</li>
-              <li>ResNet50/ResNet50V2, data augmentation</li>
-              <li>Distributed training on CPU/TPU</li>
-              <li>Confusion matrix & F1 evaluation</li>
-            </ul>
-            <a href="https://github.com/dchen-win/petal_to_metals" target="_blank" class="btn btn-primary btn-sm">View Project</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- Education Section -->
-<section id="education" style="background-color: #ffffff; padding: 32px 20px;">
-  <div class="container" style="max-width: 1200px; margin: 0 auto;">
-
-    <!-- Section Title with Icon -->
-    <h2 class="text-center mb-4" style="display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 32px; font-weight: 700;">
-      <i class="bi bi-mortarboard-fill" style="font-size: 2rem; color: #333;"></i>
-      Education
-    </h2>
-
-    <!-- Two Side-by-Side Cards -->
-    <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
-
-      <!-- OSU Card -->
-      <div style="
-        flex: 1 1 48%;
-        background-color: #fff;
-        border-radius: 12px;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-        padding: 8px 16px 12px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      ">
-        <a href="https://ecampus.oregonstate.edu/online-degrees/graduate/data-analytics/" target="_blank" style="margin: 0;">
-          <img src="images/osu-logo.png" alt="OSU Logo" style="width: 252px; height: 252px; object-fit: contain; margin-top: -48px;">
-        </a>
-        <h3 style="font-size: 20px; font-weight: 600; margin: -24px 0 4px;">
-          Master of Science in Data Analytics / Applied Statistics / Data Science
-        </h3>
-        <p style="margin: 0;"><strong>Oregon State University</strong>, 2022 – 2025</p>
-        <p style="margin-top: 28px;">Graduate coursework and projects focusing on applied statistics, machine learning, and data visualization.</p>
-      </div>
-
-      <!-- UP Card -->
-      <div style="
-        flex: 1 1 48%;
-        background-color: #fff;
-        border-radius: 12px;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-        padding: 8px 16px 12px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      ">
-        <a href="https://www.up.edu/graduate/program-requirements/msotm.html" target="_blank" style="margin: 0;">
-          <img src="images/up-logo.png" alt="UP Logo" style="width: 252px; height: 252px; object-fit: contain; margin-top: -48px;">
-        </a>
-        <h3 style="font-size: 20px; font-weight: 600; margin: -24px 0 4px;">
-          Master of Science in Operation and Technology Management
-        </h3>
-        <p style="margin: 0;"><strong>University of Portland</strong>, 2017 – 2019</p>
-        <p style="margin-top: 28px;">Focused on operations management, technology adoption, and business analytics.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-<!-- Contact Section -->
-<section id="contact" class="bg-light">
-  <div class="container">
-    <h2 class="text-center mb-5">Get In Touch</h2>
-    <p class="text-center mb-4">Feel free to reach out for collaborations, consulting, or just to say hello!</p>
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <form action="https://formspree.io/f/xvgrregw" method="POST">
-          <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" id="name" name="name" class="form-control" required />
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" name="email" class="form-control" required />
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
-          </div>
-          <div class="text-center">
-            <button type="submit" class="btn btn-primary px-4">Send</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Cindy Chen. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Bootstrap 5 JS Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Optional: Active link highlighting on scroll -->
-  <script>
-    // Update active nav link on scroll
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 80;
-        if (pageYOffset >= sectionTop) {
-          current = section.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-          link.classList.add('active');
-        }
+  // Project filter
+  var filters = document.querySelectorAll('.filter');
+  var cards = document.querySelectorAll('.card');
+  filters.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var f = btn.getAttribute('data-filter');
+      filters.forEach(function (b) { b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+      cards.forEach(function (c) {
+        var cats = c.getAttribute('data-cat').split(' ');
+        c.hidden = !(f === 'all' || cats.indexOf(f) !== -1);
       });
     });
-  </script>
+  });
 
+  // Footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
 </body>
 </html>

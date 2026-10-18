@@ -6,18 +6,24 @@
 <meta name="color-scheme" content="light dark">
 <script>document.documentElement.classList.add('js');</script>
 
-<title>Cindy Chen | Analytics Leader: BI, Data Products &amp; AI</title>
-<meta name="description" content="Nike analytics leader with 8+ years in BI, commercial analytics, data products and AI-enabled analytics. See results, experience and data science projects.">
+<title>Cindy Chen | AI-Driven Analytics &amp; BI Leadership</title>
+<meta name="description" content="Cindy Chen is a Senior Data Analytics &amp; Science Manager at Nike who has delivered $100M+ in incremental value and $135M+ in cost savings. SQL, Python, R, Snowflake, Tableau, machine learning and AI-driven analytics.">
 <link rel="canonical" href="https://dchen-win.github.io/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B6B64'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='28' font-weight='700' text-anchor='middle' fill='white'%3ECC%3C/text%3E%3C/svg%3E">
 
 <!-- Link previews (LinkedIn, Slack, iMessage, etc.) -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Cindy Chen | Analytics Leader: BI, Data Products &amp; AI">
-<meta property="og:description" content="Senior Data Analytics &amp; Science Manager at Nike. BI, commercial analytics, data products, AI-enabled analytics and machine learning, with measurable results at scale.">
+<meta property="og:title" content="Cindy Chen | AI-Driven Analytics &amp; BI Leadership">
+<meta property="og:description" content="Senior Data Analytics &amp; Science Manager. AI-driven analytics and BI leadership, proven in real-world business results: $135M+ cost savings and $100M+ incremental value.">
 <meta property="og:url" content="https://dchen-win.github.io/">
-<meta property="og:image" content="https://dchen-win.github.io/images/portrait.jpg">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://dchen-win.github.io/linkedin-card.jpg">
+<meta property="og:image:secure_url" content="https://dchen-win.github.io/linkedin-card.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cindy Chen, Senior Data Analytics &amp; Science Manager">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://dchen-win.github.io/linkedin-card.jpg">
 
 <script type="application/ld+json">
 {
@@ -27,7 +33,7 @@
   "jobTitle": "Senior Data Analytics & Science Manager",
   "worksFor": { "@type": "Organization", "name": "Nike" },
   "url": "https://dchen-win.github.io/",
-  "image": "https://dchen-win.github.io/images/portrait.jpg",
+  "image": "https://dchen-win.github.io/images/Prof.JPG",
   "sameAs": [
     "https://www.linkedin.com/in/chendi20",
     "https://github.com/dchen-win"
@@ -36,7 +42,7 @@
     { "@type": "CollegeOrUniversity", "name": "Oregon State University" },
     { "@type": "CollegeOrUniversity", "name": "University of Portland" }
   ],
-  "knowsAbout": ["Analytics leadership", "Data science", "SQL", "Python", "R", "Tableau", "Power BI", "Forecasting", "Machine learning", "Business intelligence", "Data products", "AI-enabled analytics"]
+  "knowsAbout": ["Analytics leadership", "Data science", "AI-driven analytics", "SQL", "Python", "R", "PySpark", "Snowflake", "Databricks", "Tableau", "Power BI", "Forecasting", "Machine learning"]
 }
 </script>
 
@@ -127,7 +133,7 @@ p{margin:0 0 1rem}
 .hero :focus-visible,.band :focus-visible{outline-color:var(--hero-accent)}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
 .role{font-family:var(--head);font-weight:600;color:var(--hero-accent);margin:0 0 1rem}
-.hero h1{color:#fff;max-width:17ch}
+.hero h1{color:#fff;max-width:21ch;font-size:clamp(2rem,4.4vw,3.2rem)}
 .summary{max-width:56ch;margin:1.4rem 0 0;font-size:1.12rem;color:var(--on-hero)}
 .tagline{margin:1rem 0 0;color:var(--on-hero-muted);font-style:italic}
 .actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.8rem}
@@ -168,7 +174,7 @@ p{margin:0 0 1rem}
 @media (max-width:820px){.pillars{grid-template-columns:1fr}}
 
 /* Experience: logo tabs + one detail panel */
-.tabs{display:none;grid-template-columns:repeat(5,minmax(0,1fr));gap:.75rem}
+.tabs{display:none;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem}
 .js .tabs{display:grid}
 .tab{display:flex;flex-direction:column;align-items:flex-start;gap:.5rem;padding:.8rem;text-align:left;font:inherit;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:12px;box-shadow:var(--shadow-sm);cursor:pointer;transition:border-color .15s,background-color .15s}
 .tab:hover{border-color:var(--teal)}
@@ -188,6 +194,16 @@ p{margin:0 0 1rem}
 @media (max-width:860px){
   .tabs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:150px;overflow-x:auto;padding-bottom:.5rem}
 }
+
+/* Nike role cards */
+.roles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1.1rem}
+.role-card{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:1rem 1.15rem}
+.role-card.current{border-color:var(--teal);background:var(--teal-bg)}
+.role-card h4{font-family:var(--head);font-weight:700;font-size:1rem;line-height:1.25;margin:0;color:var(--ink)}
+.role-card .dates{display:block;margin:.15rem 0 .6rem;font-size:.88rem}
+.role-card ul{margin:0;padding-left:1.1rem;max-width:none}
+.role-card li{margin-bottom:.3rem}
+@media (max-width:700px){.roles{grid-template-columns:1fr}}
 
 /* Projects */
 .filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
@@ -252,10 +268,10 @@ p{margin:0 0 1rem}
   <section class="hero" id="top">
     <div class="wrap hero-grid">
       <div>
-        <p class="role">Cindy Chen, Senior Data Analytics &amp; Science Manager at Nike</p>
-        <h1>Analytics leadership, backed by hands-on data science.</h1>
-        <p class="summary">I lead analytics teams across marketplace, retail and digital at Nike, building governed data products, AI-enabled analytics, and the forecasts and pipelines behind them. Eight-plus years at Nike, Adidas, Jama Software and Daimler Truck, plus an M.S. in Data Analytics from Oregon State University.</p>
-        <p class="tagline">Turning data complexity into simple stories that drive impact.</p>
+        <p class="role">Cindy Chen, Senior Data Analytics &amp; Science Manager</p>
+        <h1>AI-driven analytics and BI leadership, proven in real-world business results.</h1>
+        <p class="summary">Curious by nature and accountable for results: $100M+ in incremental value and $135M+ in cost savings at Nike. I lead analysts and engineers, build data products, and use machine learning and AI to deliver faster. Eight-plus years across Nike, Adidas, Jama Software and Daimler Truck, plus two master’s degrees.</p>
+        <p class="tagline">Always learning. Always shipping.</p>
         <div class="actions">
           <a class="btn btn-primary" href="#projects">View projects</a>
           <!-- If you rename the PDF (recommended: Cindy-Chen-Resume.pdf), update this link. -->
@@ -266,18 +282,18 @@ p{margin:0 0 1rem}
           <a href="https://github.com/dchen-win" rel="noopener">GitHub</a>
         </div>
       </div>
-      <img class="portrait" src="images/portrait.jpg" alt="Portrait of Cindy Chen" decoding="async">
+      <img class="portrait" src="images/Prof.JPG" alt="Portrait of Cindy Chen" decoding="async">
     </div>
   </section>
 
   <!-- RESULTS -->
   <div class="wrap" id="results">
     <ul class="stats" aria-label="Results from my work">
-      <li><span class="fig">$100M+</span><span class="what">Incremental value from improving the product experience on marketplace partner sites</span><span class="where">Nike</span></li>
-      <li><span class="fig">$135M+</span><span class="what">Cost savings and 50% faster data refresh across bookings and POS analytics</span><span class="where">Nike</span></li>
-      <li><span class="fig">$25M+</span><span class="what">Domestic fulfillment value from expanding the U.S. retail analytics platform to Canada</span><span class="where">Nike</span></li>
-      <li><span class="fig">60%</span><span class="what">Less ad hoc analysis from an AI-powered analytics agent on a governed data source</span><span class="where">Nike</span></li>
-      <li><span class="fig">80%</span><span class="what">Less manual data-mapping effort through PySpark automation</span><span class="where">Nike</span></li>
+      <li><span class="fig">$135M+</span><span class="what">Cost savings delivered at Wholesale Marketplace Partners</span><span class="where">Nike</span></li>
+      <li><span class="fig">$100M+</span><span class="what">Incremental value delivered at Micro Competitive Insights</span><span class="where">Nike</span></li>
+      <li><span class="fig">$25M+</span><span class="what">Canada fulfillment value enabled, delivered with AI in 3 months, not 6</span><span class="where">Nike</span></li>
+      <li><span class="fig">$20M+</span><span class="what">Saved annually by automating data gathering and fixing supply chain issues</span><span class="where">Adidas</span></li>
+      <li><span class="fig">500+</span><span class="what">Users served with trusted data, with data refresh time cut by 50%</span><span class="where">Nike</span></li>
     </ul>
   </div>
 
@@ -285,30 +301,29 @@ p{margin:0 0 1rem}
   <section class="section" id="skills">
     <div class="wrap">
       <div class="section-head">
-        <h2>Where analytics leadership meets data science</h2>
+        <h2>Where analytics leadership meets data science and AI</h2>
       </div>
       <div class="pillars">
         <article class="pillar pillar-lead">
           <h3>Analytics leadership</h3>
           <ul>
-            <li>Lead and mentor analysts and data engineers, aligning stakeholders across Sales, Finance, Operations and Digital.</li>
-            <li>Build governed data products that replace fragmented reporting, including an AI-powered analytics agent that cut ad hoc analysis by 60%.</li>
-            <li>Took the SEC Bookings pipeline from testing to production and defined KPIs for retail-partner growth.</li>
-            <li>Aligned technical data design with stakeholder goals on Nike’s global promo project.</li>
+            <li>Lead analysts and engineers, mentor them, and align stakeholders across four roles at Nike.</li>
+            <li>Led a visualization developer and a data engineer at Micro Competitive Insights.</li>
+            <li>Modernized 50% of legacy dashboards and cut data refresh time by 50%.</li>
           </ul>
-          <ul class="chips" aria-label="Leadership tools">
-            <li>SQL</li><li>Tableau</li><li>Power BI</li><li>Snowflake</li><li>Databricks</li><li>Azure</li><li>Alteryx</li>
+          <ul class="chips" aria-label="Leadership skills and tools">
+            <li>Leadership</li><li>Stakeholder management</li><li>SQL</li><li>Snowflake</li><li>Tableau</li><li>Power BI</li>
           </ul>
         </article>
         <article class="pillar pillar-ds">
-          <h3>Data science</h3>
+          <h3>Data science and AI</h3>
           <ul>
-            <li>Forecasting with ARIMA, time-series decomposition and Monte Carlo simulation.</li>
-            <li>Classification with XGBoost, logistic regression, SVM and k-NN.</li>
-            <li>Deep learning (ResNet50 on TPU) and cloud ETL with Spark and BigQuery.</li>
+            <li>Used AI to deliver in 3 months what was planned for 6.</li>
+            <li>Cut manual data mapping by 80% and ad hoc analysis by 60%.</li>
+            <li>Forecast revenue with machine learning models. Projects here cover ARIMA, XGBoost and ResNet50.</li>
           </ul>
-          <ul class="chips" aria-label="Data science tools">
-            <li>Python</li><li>R</li><li>scikit-learn</li><li>TensorFlow</li><li>XGBoost</li><li>Spark</li><li>PySpark</li><li>BigQuery</li><li>ggplot2</li>
+          <ul class="chips" aria-label="Data science skills and tools">
+            <li>Python</li><li>R</li><li>PySpark</li><li>Databricks</li><li>Machine learning</li><li>Statistical modeling</li><li>AI-driven analytics</li><li>AI agents</li>
           </ul>
         </article>
       </div>
@@ -339,33 +354,61 @@ p{margin:0 0 1rem}
           <span class="tab-logo"><img src="images/daimler-logo.png" alt=""></span>
           <span class="tab-name">Daimler Truck</span><span class="tab-years">2019 – 2020</span>
         </button>
-        <button class="tab" role="tab" id="tab-ascm" aria-controls="panel-ascm" aria-selected="false" tabindex="-1">
-          <span class="tab-logo"><img src="images/ascm-logo.png" alt=""></span>
-          <span class="tab-name">ASCM</span><span class="tab-years">2017 – 2018</span>
-        </button>
       </div>
 
       <div class="panel" role="tabpanel" id="panel-nike" aria-labelledby="tab-nike">
         <div class="panel-head">
-          <div><h3>Senior Data Analytics &amp; Science Manager</h3><p class="panel-co">Nike, Beaverton, OR</p></div>
+          <div><h3>Senior Data Analytics &amp; Science Manager</h3><p class="panel-co">Nike, Beaverton, OR. Four roles across Wholesale, Direct, Competitive Insights and Self Service.</p></div>
           <span class="dates">Oct 2022 – Present</span>
         </div>
-        <ul>
-          <li>Lead analysts and data engineers delivering analytics products for Sales, Finance and Operations; mentor the team in SQL, data modeling and stakeholder communication.</li>
-          <li>Delivered $100M+ in incremental value by improving the digital product experience on marketplace partner sites, and cut manual data mapping by 80% with PySpark similarity scoring.</li>
-          <li>Expanded the U.S. retail analytics platform to Canada, enabling $25M+ in domestic fulfillment value.</li>
-          <li>Built an AI-powered analytics agent on a governed source of truth, cutting ad hoc analysis by 60%.</li>
-          <li>Led the SEC Bookings rollout in North America and moved historical data from Teradata to Snowflake, cutting data refresh time by 50%.</li>
-          <li>Modernized 50% of Nike Stores legacy dashboards and built machine learning revenue forecasts.</li>
-        </ul>
+        <div class="roles">
+          <article class="role-card current">
+            <h4>Nike Direct Self Service, Global</h4>
+            <span class="dates">Jun 2026 – Present</span>
+            <ul>
+              <li>Enabled $25M+ in Canada fulfillment value.</li>
+              <li>Leveraged AI to deliver in 3 months, not 6.</li>
+              <li>Reduced ad hoc analysis by 60%.</li>
+            </ul>
+          </article>
+          <article class="role-card">
+            <h4>Micro Competitive Insights, Global</h4>
+            <span class="dates">Aug 2025 – Jun 2026</span>
+            <ul>
+              <li>Delivered $100M+ in incremental value.</li>
+              <li>Automated manual data mapping, cutting it by 80%.</li>
+              <li>Led one visualization developer and one data engineer.</li>
+            </ul>
+          </article>
+          <article class="role-card">
+            <h4>Nike Direct Digital &amp; Stores (Stretch Lead)</h4>
+            <span class="dates">Aug 2024 – Aug 2025</span>
+            <ul>
+              <li>Delivered $6M+ in impact.</li>
+              <li>Modernized 50% of legacy dashboards.</li>
+              <li>Forecast revenue with machine learning models.</li>
+            </ul>
+          </article>
+          <article class="role-card">
+            <h4>Wholesale Marketplace Partners, NA</h4>
+            <span class="dates">Oct 2022 – Aug 2024</span>
+            <ul>
+              <li>Delivered $135M+ in cost savings.</li>
+              <li>Reduced data refresh time by 50%.</li>
+              <li>Served 500+ users with trusted data.</li>
+            </ul>
+          </article>
+        </div>
       </div>
 
       <div class="panel" role="tabpanel" id="panel-adidas" aria-labelledby="tab-adidas">
         <div class="panel-head">
-          <div><h3>Senior Data Analyst</h3><p class="panel-co">Adidas, Portland, OR</p></div>
+          <div><h3>Senior Business Data Analyst</h3><p class="panel-co">Adidas, Portland, OR</p></div>
           <span class="dates">Jun 2021 – Sep 2022</span>
         </div>
+        <!-- TODO: confirm the $20M+ annual savings and the $10M split-shipping figure are consistent, so a reader doesn't see them as conflicting. -->
         <ul>
+          <li>Saved $20M+ annually by automating data gathering, fixing supply chain issues and delivering dashboards.</li>
           <li>Reduced $10M in split shipping costs through SQL-based root-cause analysis.</li>
           <li>Improved transportation performance by 20% by analyzing carrier KPIs in Tableau.</li>
           <li>Led a price elasticity analysis, driving 10% revenue growth post-launch.</li>
@@ -376,7 +419,7 @@ p{margin:0 0 1rem}
 
       <div class="panel" role="tabpanel" id="panel-jama" aria-labelledby="tab-jama">
         <div class="panel-head">
-          <div><h3>BI Analyst</h3><p class="panel-co">Jama Software, Portland, OR</p></div>
+          <div><h3>Operations Analyst</h3><p class="panel-co">Jama Software, Portland, OR</p></div>
           <span class="dates">Mar 2020 – May 2021</span>
         </div>
         <!-- TODO: the 40% net income claim will draw questions. Name the metric and how it was measured (for example pipeline, conversion or revenue), or reword it. -->
@@ -390,22 +433,15 @@ p{margin:0 0 1rem}
 
       <div class="panel" role="tabpanel" id="panel-daimler" aria-labelledby="tab-daimler">
         <div class="panel-head">
-          <div><h3>Data Analyst</h3><p class="panel-co">Daimler Truck North America, Portland, OR</p></div>
+          <div><h3>Data Analyst Intern, Data Analyst</h3><p class="panel-co">Daimler Truck North America, Portland, OR</p></div>
           <span class="dates">Jan 2019 – Feb 2020</span>
         </div>
         <ul>
+          <li>Built a technical foundation for delivering insights through analytics and visualization.</li>
           <li>Analyzed telematics and component data for machine learning model development.</li>
           <li>Built live Power BI and Tableau dashboards using SQL-based data normalization models.</li>
           <li>Troubleshot dashboard performance and ensured the accuracy of service-level data.</li>
         </ul>
-      </div>
-
-      <div class="panel" role="tabpanel" id="panel-ascm" aria-labelledby="tab-ascm">
-        <div class="panel-head">
-          <div><h3>Senior Consultant, Supply Chain</h3><p class="panel-co">ASCM</p></div>
-          <span class="dates">2017 – 2018</span>
-        </div>
-        <p class="panel-note">Provided data-driven consulting for supply chain optimization.</p>
       </div>
     </div>
   </section>
@@ -428,6 +464,7 @@ p{margin:0 0 1rem}
 
       <!-- TODO: add a one-line result to each card (accuracy, top predictors, what the forecast showed). -->
       <div class="projects">
+
         <article class="card" data-cat="stats">
           <img class="card-img" src="images/sports.png" alt="" loading="lazy">
           <div class="card-body">
@@ -437,15 +474,7 @@ p{margin:0 0 1rem}
             <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/Optimizing-Nike-Revenues-Forecasting" rel="noopener">View on GitHub</a>
           </div>
         </article>
-        <article class="card" data-cat="eng viz">
-          <img class="card-img" src="images/customer.png" alt="" loading="lazy">
-          <div class="card-body">
-            <h3>Stack Exchange user engagement</h3>
-            <p>Cloud ETL pipeline and Power BI dashboards on user behavior and engagement trends.</p>
-            <ul class="tags"><li>Python</li><li>Spark</li><li>BigQuery</li><li>Power BI</li></ul>
-            <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/stack-exchange-user-engagement-analysis" rel="noopener">View on GitHub</a>
-          </div>
-        </article>
+
         <article class="card" data-cat="ml">
           <img class="card-img" src="images/vehicle-loan.png" alt="" loading="lazy">
           <div class="card-body">
@@ -455,15 +484,17 @@ p{margin:0 0 1rem}
             <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/R-Group-Project" rel="noopener">View on GitHub</a>
           </div>
         </article>
-        <article class="card" data-cat="ml">
-          <img class="card-img" src="images/ml.png" alt="" loading="lazy">
+
+        <article class="card" data-cat="eng viz">
+          <img class="card-img" src="images/customer.png" alt="" loading="lazy">
           <div class="card-body">
-            <h3>Machine learning fundamentals</h3>
-            <p>Classification and regression with k-NN, SVM and logistic regression, plus text classification.</p>
-            <ul class="tags"><li>Python</li><li>scikit-learn</li><li>pandas</li></ul>
-            <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/ML-Foundamentals-OSU" rel="noopener">View on GitHub</a>
+            <h3>Stack Exchange user engagement</h3>
+            <p>Cloud ETL pipeline and Power BI dashboards on user behavior and engagement trends.</p>
+            <ul class="tags"><li>Python</li><li>Spark</li><li>BigQuery</li><li>Power BI</li></ul>
+            <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/stack-exchange-user-engagement-analysis" rel="noopener">View on GitHub</a>
           </div>
         </article>
+
         <article class="card" data-cat="ml">
           <img class="card-img" src="images/flower.png" alt="" loading="lazy">
           <div class="card-body">
@@ -473,15 +504,7 @@ p{margin:0 0 1rem}
             <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/petal_to_metals" rel="noopener">View on GitHub</a>
           </div>
         </article>
-        <article class="card" data-cat="ml">
-          <img class="card-img" src="images/ai.jpg" alt="" loading="lazy">
-          <div class="card-body">
-            <h3>Artificial intelligence projects</h3>
-            <p>A* search, constraint solvers and logical inference engines in Python.</p>
-            <ul class="tags"><li>Python</li><li>A*</li><li>CSP</li></ul>
-            <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/AI-Fundamentals-OSU" rel="noopener">View on GitHub</a>
-          </div>
-        </article>
+
         <article class="card" data-cat="stats">
           <img class="card-img" src="images/education.png" alt="" loading="lazy">
           <div class="card-body">
@@ -491,6 +514,7 @@ p{margin:0 0 1rem}
             <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/logistic-regression-census-education-income" rel="noopener">View on GitHub</a>
           </div>
         </article>
+
         <article class="card" data-cat="stats">
           <img class="card-img" src="images/house.png" alt="" loading="lazy">
           <div class="card-body">
@@ -500,6 +524,7 @@ p{margin:0 0 1rem}
             <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/electricity-cost-analysis" rel="noopener">View on GitHub</a>
           </div>
         </article>
+
         <article class="card" data-cat="viz">
           <img class="card-img" src="images/chocolate.png" alt="" loading="lazy">
           <div class="card-body">
@@ -507,6 +532,26 @@ p{margin:0 0 1rem}
             <p>Sales trends across regions and products, with direct labeling and colorblind-friendly charts.</p>
             <ul class="tags"><li>R</li><li>tidyverse</li><li>ggplot2</li></ul>
             <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/Data-visualization-R" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
+
+        <article class="card" data-cat="ml">
+          <img class="card-img" src="images/ml.png" alt="" loading="lazy">
+          <div class="card-body">
+            <h3>Machine learning fundamentals</h3>
+            <p>Classification and regression with k-NN, SVM and logistic regression, plus text classification.</p>
+            <ul class="tags"><li>Python</li><li>scikit-learn</li><li>pandas</li></ul>
+            <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/ML-Foundamentals-OSU" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
+
+        <article class="card" data-cat="ml">
+          <img class="card-img" src="images/ai.jpg" alt="" loading="lazy">
+          <div class="card-body">
+            <h3>Artificial intelligence projects</h3>
+            <p>A* search, constraint solvers and logical inference engines in Python.</p>
+            <ul class="tags"><li>Python</li><li>A*</li><li>CSP</li></ul>
+            <a class="btn btn-ghost btn-small" href="https://github.com/dchen-win/AI-Fundamentals-OSU" rel="noopener">View on GitHub</a>
           </div>
         </article>
 
@@ -520,20 +565,20 @@ p{margin:0 0 1rem}
       <div class="section-head"><h2>Education</h2></div>
       <div class="edu-row">
         <div class="edu">
-          <div class="logo"><a href="https://ecampus.oregonstate.edu/online-degrees/graduate/data-analytics/" rel="noopener" aria-label="Oregon State University data analytics program"><img src="images/osu-logo.png" alt="Oregon State University logo" loading="lazy"></a></div>
+          <div class="logo"><img src="images/osu-logo.png" alt="Oregon State University logo" loading="lazy"></div>
           <div>
-            <h3>M.S. in Data Analytics</h3>
-            <!-- Confirm the exact degree title on your diploma or transcript. -->
+            <h3>M.S. in Data Science &amp; Statistics</h3>
+            <!-- Degree names follow your new one-pager. Confirm both against your diplomas. -->
             <p class="school">Oregon State University, 2022 – 2025</p>
             <p>Applied statistics, machine learning and data visualization.</p>
           </div>
         </div>
         <div class="edu">
-          <div class="logo"><a href="https://www.up.edu/graduate/program-requirements/msotm.html" rel="noopener" aria-label="University of Portland operations and technology management program"><img src="images/up-logo.png" alt="University of Portland logo" loading="lazy"></a></div>
+          <div class="logo"><img src="images/up-logo.png" alt="University of Portland logo" loading="lazy"></div>
           <div>
-            <h3>M.S. in Operations and Technology Management</h3>
+            <h3>M.S. in Business Analytics &amp; Supply Chain</h3>
             <p class="school">University of Portland, 2017 – 2019</p>
-            <p>Operations management, technology adoption and business analytics.</p>
+            <p>Business analytics and supply chain management.</p>
           </div>
         </div>
       </div>
@@ -544,7 +589,7 @@ p{margin:0 0 1rem}
   <section class="band" id="contact">
     <div class="wrap">
       <h2>Get in touch</h2>
-      <p>Reach out about analytics leadership, data science, or collaboration. LinkedIn is the fastest way to reach me.</p>
+      <p>Ready to lead at scale. Reach out about analytics leadership, data science, or collaboration. LinkedIn is the fastest way to reach me.</p>
       <div class="actions">
         <a class="btn btn-primary" href="https://www.linkedin.com/in/chendi20" rel="noopener">Message me on LinkedIn</a>
         <a class="btn btn-ghost" href="Resume%20Cindy%20Chen.pdf">Download resume</a>
